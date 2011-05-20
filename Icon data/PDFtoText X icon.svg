@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="256"
+   height="256"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   version="1.0"
+   sodipodi:docname="PDFtoText X icon.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="/Users/overseas/PDFtoText X 64.png"
+   inkscape:export-xdpi="22.5"
+   inkscape:export-ydpi="22.5">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <inkscape:perspective
+       id="perspective2447"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2497"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4516857"
+     inkscape:cx="131.36448"
+     inkscape:cy="119.30058"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer4"
+     showgrid="false"
+     inkscape:window-width="1680"
+     inkscape:window-height="928"
+     inkscape:window-x="0"
+     inkscape:window-y="22" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="PDF icon"
+     style="display:none">
+    <image
+       style="display:inline"
+       y="21.589109"
+       x="13.822268"
+       id="image2449"
+       height="128"
+       width="128"
+       sodipodi:absref="/Users/overseas/Desktop/pdf128.tiff"
+       xlink:href="Desktop/pdf128.tiff" />
+  </g>
+  <g
+     inkscape:label="Text icon"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:none">
+    <image
+       y="101.15897"
+       x="100.99648"
+       id="image2499"
+       height="128"
+       width="128"
+       sodipodi:absref="/Users/overseas/Desktop/txt128.tiff"
+       xlink:href="Desktop/txt128.tiff" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Lightning"
+     style="display:none">
+    <g
+       id="g3295"
+       transform="translate(-6.10949,-1.28408)">
+      <path
+         sodipodi:nodetypes="cccccccccccc"
+         id="path3293"
+         d="M 173.84593,24.611498 L 246.17564,24.611498 L 149.73603,81.786409 L 204.15552,96.941205 L 106.3382,149.983 L 146.9806,160.31582 L 23.675688,239.53406 L 98.07196,171.33749 L 49.852154,161.00467 L 138.71436,106.58517 L 91.18342,96.941205 L 173.84593,24.611498 z"
+         style="fill:#939300;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cccccccccccc"
+         id="path3281"
+         d="M 172.21359,19.0341 L 244.5433,19.0341 L 148.10369,76.209011 L 202.52318,91.363807 L 104.70586,144.4056 L 145.34826,154.73842 L 22.04334,233.95666 L 96.439612,165.76009 L 48.219806,155.42727 L 137.08202,101.00777 L 89.551072,91.363807 L 172.21359,19.0341 z"
+         style="fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Small">
+    <g
+       id="g3472"
+       inkscape:export-filename="/Users/overseas/PDFtoText icon 16.png"
+       inkscape:export-xdpi="11.076923"
+       inkscape:export-ydpi="11.076923">
+      <image
+         xlink:href="Desktop/pdf128.tiff"
+         sodipodi:absref="/Users/overseas/Desktop/pdf128.tiff"
+         width="128"
+         height="128"
+         id="image3326"
+         x="61.321407"
+         y="65.426079"
+         style="display:inline" />
+      <g
+         transform="matrix(0.5800146,0,0,0.5895693,47.445022,51.686042)"
+         id="g3328">
+        <path
+           style="fill:#939300;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 173.84593,24.611498 L 246.17564,24.611498 L 149.73603,81.786409 L 204.15552,96.941205 L 106.3382,149.983 L 146.9806,160.31582 L 23.675688,239.53406 L 98.07196,171.33749 L 49.852154,161.00467 L 138.71436,106.58517 L 91.18342,96.941205 L 173.84593,24.611498 z"
+           id="path3330"
+           sodipodi:nodetypes="cccccccccccc" />
+        <path
+           style="fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 172.21359,19.0341 L 244.5433,19.0341 L 148.10369,76.209011 L 202.52318,91.363807 L 104.70586,144.4056 L 145.34826,154.73842 L 22.04334,233.95666 L 96.439612,165.76009 L 48.219806,155.42727 L 137.08202,101.00777 L 89.551072,91.363807 L 172.21359,19.0341 z"
+           id="path3332"
+           sodipodi:nodetypes="cccccccccccc" />
+      </g>
+    </g>
+  </g>
+</svg>

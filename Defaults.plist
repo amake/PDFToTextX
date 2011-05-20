@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>OutputEncoding</key>
+	<string>UTF-8</string>
+	<key>LineEndings</key>
+	<string>unix</string>
+	<key>MimicLayout</key>
+	<false/>
+	<key>StartPage</key>
+	<string></string>
+	<key>EndPage</key>
+	<string></string>
+	<key>InsertPageBreaks</key>
+	<true/>
+	<key>AutoRefresh</key>
+	<true/>
+	<key>DisplayPDF</key>
+	<true/>
+	<key>AutoSave</key>
+	<false/>
+	<key>OutputFolder</key>
+	<string>~/Desktop</string>
+	<key>UseCustomBinary</key>
+	<false/>
+	<key>CustomBinaryPath</key>
+	<string></string>
+	<key>AlreadyDonated</key>
+	<false/>
+	<key>UsePassword</key>
+	<false/>
+	<key>RawOutput</key>
+	<false/>
+	<key>PDFPassword</key>
+	<string></string>
+	<key>OwnerPasswordType</key>
+	<true/>
+	<key>OutputToPDFFolder</key>
+	<true/>
+</dict>
+</plist>

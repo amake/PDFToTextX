@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<title>About Rules</title>
+		<link href="../styles/standard.css" rel="stylesheet" media="all" />
+	</head>
+	<body>
+		<p><a href="../iPodBackupHelp.html">iPodBackup Help</a></p>
+		<h1><img src="../images/icon32.png" alt="[icon]" />About Rules</h1>
+		<div id="main">
+			<p>iPodBackup uses an open source command line utility called <code>rsync</code> to determine which files should be backed up, and to do the actual copying.  <code>rsync</code> uses a complex system of rules to determine what gets backed up.  iPodBackup makes it easy to configure <code>rsync</code> with its Rules pane.</p>
+			<p>To access the Rules pane, select "Preferences..." from the iPodBackup application menu.  Then select an iPod, and click the "Rules" tab on the right.</p>
+			<img src="../images/rulespane.png" alt="[Rules pane screenshot]" class="screenshot" />
+			<h3>Default rules</h3>
+			<p>By default, the Rules are set such that certain items are ignored.  Those items include:</p>
+			<ul>
+				<li>The iTunes Music folder.  There is no need to backup your iTunes music with iPodBackup—that should be handled by iTunes.</li>
+				<li>The folder <code>~/Library/Caches</code> and any folder named <code>Cache</code> (this catches the Firefox cache folder, as well as others).  There is no need to backup cache files as they are meant to be temporary.</li>
+				<li>Items in the Trash</li>
+				<li>The Spotlight index.  This only applies to users of FileVault, as otherwise the home folder does not contain a Spotlight index directory.</li>
+			</ul>
+			<p>To reset the rules to the default set, simply click the "Reset to defaults" button.</p>
+			<h3>Adding rules</h3>
+			<p>You can add any rule you like by pressing the <img src="../images/plusbutton.png" alt="[+]" height="14px" /> button below the Rules list and editing the item's text.  To add a rule excluding a particular file or folder, drag it onto the list.</p>
+			<h3>Removing rules</h3>
+			<p>To remove one or more rules, select the appropriate rules and then click the <img src="../images/minusbutton.png" alt="[-]" height="14px" /> button below the Rules list.</p>
+			<h3>Advanced rulesetting</h3>
+			<p>A rule is made of two parts:</p>
+			<ol>
+				<li>A flag.  This is represented by the checkbox.</li>
+				<li>A path.  This is represented by the text.</li>
+			</ol>
+			<p>The checkbox supports three different states:</p>
+			<ul>
+				<li><img src="../images/checkboxminus.png" alt="[-]" /> corresponds to an <strong>exclusion</strong>, given to <code>rsync</code> as <code>--exclude <em>path</em></code>.</li>
+				<li><img src="../images/checkboxchecked.png" alt="[✓]" /> corresponds to an <strong>inclusion</strong>, given to <code>rsync</code> as <code>--include <em>path</em></code>.</li>
+				<li><img src="../images/checkboxempty.png" alt="[ ]" /> means a rule is disabled.  It won't be given to <code>rsync</code> at all.  Use this to temporarily turn a rule off.</li>
+			</ul>
+			<p>Here are some important tips when setting rules:</p>
+			<ul>
+				<li>The base of your home folder is represented by <code>/</code>, not <code>~</code>.
+				<li>Use wildcards like * to filter out items matching certain patterns.</li>
+				<li>Directories must be suffixed with <code>/</code>.
+				<li>Order matters.  <code>rsync</code> follows the rules exactly in order, so be careful, especially when using wildcards.</li>
+			</ul>
+			<h4>Example rules</h4>
+			<p>Say we have a folder full of information about Star Wars characters.  We don't have enough room on the iPod to store everyone, so we'll exclude all but Boba Fett.  The rules should look like this:</p>
+			<img src="../images/examplerules1.png" alt="[Example rules 1 screenshot]" class="screenshot" />
+			<p>What's happening here is the following:</p>
+			<ol>
+				<li><code>rsync</code> looks at the directory <code>~/Documents/Star Wars</code> and finds that no rules apply to it.  By default, it gets included.</li>
+				<li><code>rsync</code> then looks at the first directory inside, <code>~/Documents/Star Wars/Admiral Akbar</code>, and finds the first rule that applies, which happens to be the second rule, <code>--exclude /Documents/Star Wars/*</code>, so it excludes the good Admiral from the backup.  It <em>was</em> a trap!</li>
+				<li>Repeat no. 2 for each directory inside <code>Star Wars</code> until we reach <code>~/Documents/Star Wars/Boba Fett</code>.</li>
+				<li>Again <code>rsync</code> follows the first rule that applies, which says to <em>include</em> the folder.  <code>Boba Fett</code> is thus included in the backup.</li>
+			</ol>
+			<p>Exclude/include patterns are much more powerful and, consequently, complicated than described above.  To learn more, consult the <code>rsync</code> manpage in the Terminal by entering <code>man rsync</code>, or check online.</p>
+		</div>
+	</body>
+</html>

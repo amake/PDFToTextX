@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <title>Configuring an iPod</title>
+        <link href="../styles/standard.css" rel="stylesheet" media="all" />
+    </head>
+    <body>
+        <p><a href="../iPodBackupHelp.html">iPodBackup Help</a></p>
+        <h1><img src="../images/icon32.png" alt="[iPodBackup icon]" />Configuring an iPod</h1>
+        <div id="main">  
+            <p>Before you can begin backing up, you must configure an iPod.  This "registers" the iPod with iPodBackup so that the program knows what to do with it.</p>
+            <p>When iPodBackup launches, it checks to see if there are any mounted iPods.  If there are mounted iPods, but no configured iPods, the Add iPod sheet will automatically appear.</p>
+            <p>To open the sheet manually, go to "Preferences..." in the iPodBackup application menu.  Then click the <img src="../images/plusbutton.png" alt="[+]" height="14px" /> button near the bottom of the window.</p>
+            <img src="../images/addipodsheet.png" alt="[Add iPod sheet screenshot]" class="screenshot" />
+            <p>If you have more than one iPod mounted, choose the one you want to backup to from the popup menu.  Be sure to check the iPod's free space before continuing!  You can configure any number of iPods to be backed up with iPodBackup, each with its own backup style and rules.</p>
+            <p>You may choose to backup to either a folder or a disk image on the iPod.  Both approaches have pros and cons.</p>
+            <h3><img src="../images/folder32.png" alt="[Folder icon]" />Folder backups</h3>
+            <p>When you configure a Folder backup, a new folder will be created at <code>Your iPod/Users/username</code>.  The contents of your home folder will be copied into this folder.</p>
+            <p>Pros:</p>
+            <ul>
+                <li>Folders are simple</li>
+                <li>Folders work well with booting OS X from your iPod</li>
+            </ul>
+            <p>Cons:</p>
+            <ul>
+                <li>Folders don't offer privacy</li>
+                <li>Manipulating folders with lots of items in them can be time-consuming</li>
+                <li>Folders can't be used on FAT32 (Windows) formatted iPods</li>
+            </ul>
+            <h3><img src="../images/diskimage32.png" alt="[Disk image icon]" />Disk image backups</h3>
+            <p>When you configure a Disk image backup, a blank disk image file will be created at <code>Your iPod/Users/username.sparseimage</code>.  A sparse disk image is a special format of disk image that can dynamically grow in size as files are added to it.  iPodBackup makes sparseimages with a maximum size of 95% the size of your iPod's hard drive.</p>
+            <p>The disk image can be either encrypted or unencrypted.  The encryption is handled transparently by OS X.</p>
+            <p>Pros:</p>
+            <ul>
+                <li>Disk images can be encrypted so your data is protected</li>
+                <li>Disk images work on FAT32 formatted iPods</li>
+                <li>A disk image is a single file, which can be easier to manipulate</li>
+            </ul>
+            <p>Cons:</p>
+            <ul>
+                <li>Disk images have to be mounted before you can access their contents</li>
+                <li>If you lose the password to an encrypted disk image, your data is likely gone forever.  It is recommended that you have OS X store your disk image's password in the Keychain.</li>
+                <li>Similarly, if the disk image becomes corrupted, your data is likely gone forever.  Don't try to view the disk image in iPodLinux's file browser!</li>
+                <li>Disk images can't be mounted on Windows machines</li>
+                <li>When deleting items from a disk image, the size of the disk image does not decrease unless you compact it.  Compacting can be time consuming depending on the size of the image, and whether or not it's encrypted.</li>
+            </ul>
+            <p>That said, the author of iPodBackup personally prefers disk images.</p>
+        </div>
+    </body>
+</html>

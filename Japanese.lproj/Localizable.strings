@@ -1,0 +1,21 @@
+﻿/* Donate */
+"donateButton1" = "寄付する";
+
+/* Not now */
+"donateButton2" = "寄付しない";
+
+/* Don't ask again */
+"donateButton3" = "二度と表示しない";
+
+/* You have used %@ a total of %d times.  Please consider donating even a small amount to support its development. */
+"donateText" = "%@ を %d 回ご利用いただきました。開発者を少しでもご支援いただけたら大変感謝いたします。";
+
+/* Please donate! */
+"donateTitle" = "ご寄付をお願いします";
+
+/* Done */
+"doneStatus" = "完了";
+
+/* Processing... */
+"processingStatus" = "処理中…";
+

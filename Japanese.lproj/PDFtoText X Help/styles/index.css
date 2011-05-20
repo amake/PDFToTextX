@@ -1,0 +1,8 @@
+body { font-family: Lucida Grande, sans-serif; font-size: 12px; padding: none; margin: 2em 0; }
+#frame { top: 0; left: 0; height: 100%; width: 100%; display: table; }
+#main { vertical-align: middle; width: 50%; border-right: thin solid gray; text-align: center; display: table-cell; padding: 1em; }
+#toc { vertical-align: middle; font-size: 1em; width: 50%; display: table-cell; padding: 0 2em; }
+#toc h2 { font-size: 1em; margin: 0; padding: 0; }
+#toc p { margin: 0.3em 0 0 0; padding: 0; }
+#toc ul { display: block; padding: 0 2em; list-style: none; margin: 0 auto; max-width: 18em; }
+#toc li { margin: 2em 0; }

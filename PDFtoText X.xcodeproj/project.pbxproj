@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		C4E71AA80F9966C70006D697 /* Distribution */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C4E71AB10F9966D90006D697 /* Build configuration list for PBXAggregateTarget "Distribution" */;
+			buildPhases = (
+				C4E71AA70F9966C70006D697 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Distribution;
+			productName = Distribution;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		8D5C4EAC0FA6F03400B9456E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8D5C4EAB0FA6F03400B9456E /* Credits.rtf */; };
+		8D5C4ED60FA6FB7300B9456E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D5C4ED40FA6FB7300B9456E /* Localizable.strings */; };
+		8D93FFB40FA837A50041C76E /* PDFtoText X.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8D93FFB30FA837A50041C76E /* PDFtoText X.icns */; };
+		8DCFAE3B0F945E110091F961 /* AMKDragWell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCFAE3A0F945E110091F961 /* AMKDragWell.m */; };
+		C417FDC90F91E6BF0031A2E9 /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = C417FDC80F91E6BF0031A2E9 /* Defaults.plist */; };
+		C417FEC10F93726B0031A2E9 /* AMKDragWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C417FEC00F93726B0031A2E9 /* AMKDragWindow.m */; };
+		C417FF9B0F94BF130031A2E9 /* AMKPathToIconTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = C417FF9A0F94BF130031A2E9 /* AMKPathToIconTransformer.m */; };
+		C448D1DE13861E5900632126 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C448D1DD13861E5900632126 /* Sparkle.framework */; };
+		C448D1F713861EB200632126 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C448D1DD13861E5900632126 /* Sparkle.framework */; };
+		C4E71A460F995BA40006D697 /* LICENSE.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C4E71A450F995BA40006D697 /* LICENSE.rtf */; };
+		C4E71AA40F9966740006D697 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = C4E71AA30F9966740006D697 /* dsa_pub.pem */; };
+		C4E71CB70FA72EF60006D697 /* PDFtoText X Help in Resources */ = {isa = PBXBuildFile; fileRef = C4E71B250F99A8D10006D697 /* PDFtoText X Help */; };
+		C4E71DD40FA741D40006D697 /* xpdf in Resources */ = {isa = PBXBuildFile; fileRef = C4E71DD30FA741D40006D697 /* xpdf */; };
+		C4F47D8E0F90383A00762447 /* pdftotext in Resources */ = {isa = PBXBuildFile; fileRef = C4F47D8D0F90383A00762447 /* pdftotext */; };
+		C4F47F340F90385F00762447 /* xpdfrc in Resources */ = {isa = PBXBuildFile; fileRef = C4F47F330F90385F00762447 /* xpdfrc */; };
+		C4F480210F9052CC00762447 /* AMKAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F480200F9052CC00762447 /* AMKAppController.m */; };
+		C4F4802E0F9053B600762447 /* AMKPdfDumper.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F4802D0F9053B600762447 /* AMKPdfDumper.m */; };
+		C4F4817F0F90626000762447 /* languages in Resources */ = {isa = PBXBuildFile; fileRef = C4F480950F90626000762447 /* languages */; };
+		C4F481D60F90634100762447 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F481D50F90634100762447 /* Quartz.framework */; };
+		C4F484570F90F4BC00762447 /* AMKKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F484560F90F4BC00762447 /* AMKKeys.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C448D1F313861E9200632126 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C448D1F713861EB200632126 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* PDFtoText X_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PDFtoText X_Prefix.pch"; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* PDFtoText X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PDFtoText X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5C4E8B0FA6E4A800B9456E /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Japanese; path = Japanese.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		8D5C4EAD0FA6F04200B9456E /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Japanese; path = Japanese.lproj/Credits.rtf; sourceTree = "<group>"; };
+		8D5C4ED50FA6FB7300B9456E /* Japanese */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8D93FF660FA81C520041C76E /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8D93FFB30FA837A50041C76E /* PDFtoText X.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "PDFtoText X.icns"; sourceTree = "<group>"; };
+		8DCFAE390F945E110091F961 /* AMKDragWell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMKDragWell.h; sourceTree = "<group>"; };
+		8DCFAE3A0F945E110091F961 /* AMKDragWell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMKDragWell.m; sourceTree = "<group>"; };
+		8DDD5F2F0F98732C0063D417 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
+		C417FDC80F91E6BF0031A2E9 /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
+		C417FEBF0F93726B0031A2E9 /* AMKDragWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMKDragWindow.h; sourceTree = "<group>"; };
+		C417FEC00F93726B0031A2E9 /* AMKDragWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMKDragWindow.m; sourceTree = "<group>"; };
+		C417FF990F94BF130031A2E9 /* AMKPathToIconTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMKPathToIconTransformer.h; sourceTree = "<group>"; };
+		C417FF9A0F94BF130031A2E9 /* AMKPathToIconTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMKPathToIconTransformer.m; sourceTree = "<group>"; };
+		C448D1DD13861E5900632126 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		C4E71A450F995BA40006D697 /* LICENSE.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = LICENSE.rtf; sourceTree = "<group>"; };
+		C4E71AA30F9966740006D697 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		C4E71B250F99A8D10006D697 /* PDFtoText X Help */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "PDFtoText X Help"; sourceTree = "<group>"; };
+		C4E71DD30FA741D40006D697 /* xpdf */ = {isa = PBXFileReference; lastKnownFileType = folder; path = xpdf; sourceTree = "<group>"; };
+		C4F47D8D0F90383A00762447 /* pdftotext */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pdftotext; sourceTree = "<group>"; };
+		C4F47F330F90385F00762447 /* xpdfrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = xpdfrc; sourceTree = "<group>"; };
+		C4F4801F0F9052CC00762447 /* AMKAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMKAppController.h; sourceTree = "<group>"; };
+		C4F480200F9052CC00762447 /* AMKAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMKAppController.m; sourceTree = "<group>"; };
+		C4F4802C0F9053B600762447 /* AMKPdfDumper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMKPdfDumper.h; sourceTree = "<group>"; };
+		C4F4802D0F9053B600762447 /* AMKPdfDumper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMKPdfDumper.m; sourceTree = "<group>"; };
+		C4F480950F90626000762447 /* languages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = languages; sourceTree = "<group>"; };
+		C4F481D50F90634100762447 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
+		C4F484460F90F08800762447 /* AMKKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMKKeys.h; sourceTree = "<group>"; };
+		C4F484560F90F4BC00762447 /* AMKKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMKKeys.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				C4F481D60F90634100762447 /* Quartz.framework in Frameworks */,
+				C448D1DE13861E5900632126 /* Sparkle.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C417FF990F94BF130031A2E9 /* AMKPathToIconTransformer.h */,
+				C417FF9A0F94BF130031A2E9 /* AMKPathToIconTransformer.m */,
+				C417FEBF0F93726B0031A2E9 /* AMKDragWindow.h */,
+				C417FEC00F93726B0031A2E9 /* AMKDragWindow.m */,
+				8DCFAE390F945E110091F961 /* AMKDragWell.h */,
+				8DCFAE3A0F945E110091F961 /* AMKDragWell.m */,
+				C4F484460F90F08800762447 /* AMKKeys.h */,
+				C4F484560F90F4BC00762447 /* AMKKeys.m */,
+				C4F4802C0F9053B600762447 /* AMKPdfDumper.h */,
+				C4F4802D0F9053B600762447 /* AMKPdfDumper.m */,
+				C4F4801F0F9052CC00762447 /* AMKAppController.h */,
+				C4F480200F9052CC00762447 /* AMKAppController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4F481D50F90634100762447 /* Quartz.framework */,
+				C448D1DD13861E5900632126 /* Sparkle.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* PDFtoText X.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* PDFtoText X */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = "PDFtoText X";
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* PDFtoText X_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C417FDC80F91E6BF0031A2E9 /* Defaults.plist */,
+				C4F480950F90626000762447 /* languages */,
+				C4F47F330F90385F00762447 /* xpdfrc */,
+				C4E71DD30FA741D40006D697 /* xpdf */,
+				8D5C4ED40FA6FB7300B9456E /* Localizable.strings */,
+				C4F47D8D0F90383A00762447 /* pdftotext */,
+				C4E71AA30F9966740006D697 /* dsa_pub.pem */,
+				8D93FFB30FA837A50041C76E /* PDFtoText X.icns */,
+				C4E71A450F995BA40006D697 /* LICENSE.rtf */,
+				C4E71B250F99A8D10006D697 /* PDFtoText X Help */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				8D5C4EAB0FA6F03400B9456E /* Credits.rtf */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* PDFtoText X */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "PDFtoText X" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				C448D1F313861E9200632126 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PDFtoText X";
+			productInstallPath = "$(HOME)/Applications";
+			productName = "PDFtoText X";
+			productReference = 8D1107320486CEB800E47090 /* PDFtoText X.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PDFtoText X" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* PDFtoText X */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* PDFtoText X */,
+				C4E71AA80F9966C70006D697 /* Distribution */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				C4F47D8E0F90383A00762447 /* pdftotext in Resources */,
+				C4F47F340F90385F00762447 /* xpdfrc in Resources */,
+				C4F4817F0F90626000762447 /* languages in Resources */,
+				C417FDC90F91E6BF0031A2E9 /* Defaults.plist in Resources */,
+				8D5C4EAC0FA6F03400B9456E /* Credits.rtf in Resources */,
+				C4E71A460F995BA40006D697 /* LICENSE.rtf in Resources */,
+				C4E71AA40F9966740006D697 /* dsa_pub.pem in Resources */,
+				C4E71CB70FA72EF60006D697 /* PDFtoText X Help in Resources */,
+				8D5C4ED60FA6FB7300B9456E /* Localizable.strings in Resources */,
+				C4E71DD40FA741D40006D697 /* xpdf in Resources */,
+				8D93FFB40FA837A50041C76E /* PDFtoText X.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C4E71AA70F9966C70006D697 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "set -o errexit\n\n[ $BUILD_STYLE = Release ] || { echo Distribution target requires \"'Release'\" build style; false; }\n\nVERSION=$(defaults read \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.app/Contents/Info\" CFBundleVersion)\nDOWNLOAD_BASE_URL=\"http://aaron.madlon-kay.com/software/pdftotextx/\"\nRELEASENOTES_URL=\"http://aaron.madlon-kay.com/software/pdftotextx/release-notes.html#version-$VERSION\"\n\nARCHIVE_FILENAME=\"$PROJECT_NAME $VERSION.zip\"\nDOWNLOAD_URL=\"$DOWNLOAD_BASE_URL/$ARCHIVE_FILENAME\"\nKEYCHAIN_PRIVKEY_NAME=\"Sparkle Private Key 1\"\n\nWD=$PWD\ncd \"$BUILT_PRODUCTS_DIR\"\nrm -f \"$PROJECT_NAME\"*.zip\nzip -qr \"$ARCHIVE_FILENAME\" \"$PROJECT_NAME.app\"\n\nSIZE=$(stat -f %z \"$ARCHIVE_FILENAME\")\nPUBDATE=$(date +\"%a, %d %b %G %T %z\")\nSIGNATURE=$(\n\topenssl dgst -sha1 -binary < \"$ARCHIVE_FILENAME\" \\\n\t| openssl dgst -dss1 -sign <(security find-generic-password -g -s \"$KEYCHAIN_PRIVKEY_NAME\" 2>&1 1>/dev/null | perl -pe '($_) = /\"(.+)\"/; s/\\\\012/\\n/g') \\\n\t| openssl enc -base64\n)\n\n[ $SIGNATURE ] || { echo Unable to load signing private key with name \"'$KEYCHAIN_PRIVKEY_NAME'\" from keychain; false; }\n\ncat <<EOF\n\t\t<item>\n\t\t\t<title>Version $VERSION</title>\n\t\t\t<sparkle:releaseNotesLink>$RELEASENOTES_URL</sparkle:releaseNotesLink>\n\t\t\t<pubDate>$PUBDATE</pubDate>\n\t\t\t<enclosure\n\t\t\t\turl=\"$DOWNLOAD_URL\"\n\t\t\t\tsparkle:version=\"$VERSION\"\n\t\t\t\ttype=\"application/octet-stream\"\n\t\t\t\tlength=\"$SIZE\"\n\t\t\t\tsparkle:dsaSignature=\"$SIGNATURE\"\n\t\t\t/>\n\t\t</item>\nEOF\n\n#echo scp \"'$HOME/svn/my-cool-app/build/Release/$ARCHIVE_FILENAME'\" www.example.com:download/\n#echo scp \"'$WD/appcast.xml'\" www.example.com:web/software/my-cool-app/appcast.xml\n\nexit 0";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				C4F480210F9052CC00762447 /* AMKAppController.m in Sources */,
+				C4F4802E0F9053B600762447 /* AMKPdfDumper.m in Sources */,
+				C4F484570F90F4BC00762447 /* AMKKeys.m in Sources */,
+				C417FEC10F93726B0031A2E9 /* AMKDragWindow.m in Sources */,
+				8DCFAE3B0F945E110091F961 /* AMKDragWell.m in Sources */,
+				C417FF9B0F94BF130031A2E9 /* AMKPathToIconTransformer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+				8D5C4E8B0FA6E4A800B9456E /* Japanese */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		8D5C4EAB0FA6F03400B9456E /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8DDD5F2F0F98732C0063D417 /* English */,
+				8D5C4EAD0FA6F04200B9456E /* Japanese */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		8D5C4ED40FA6FB7300B9456E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D5C4ED50FA6FB7300B9456E /* Japanese */,
+				8D93FF660FA81C520041C76E /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PDFtoText X_Prefix.pch";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "PDFtoText X";
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PDFtoText X_Prefix.pch";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "PDFtoText X";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+				STRINGS_FILE_OUTPUT_ENCODING = "UTF-16";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C4E71AA90F9966C70006D697 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = Distribution;
+			};
+			name = Debug;
+		};
+		C4E71AAA0F9966C70006D697 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = Distribution;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "PDFtoText X" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PDFtoText X" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4E71AB10F9966D90006D697 /* Build configuration list for PBXAggregateTarget "Distribution" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4E71AA90F9966C70006D697 /* Debug */,
+				C4E71AAA0F9966C70006D697 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
