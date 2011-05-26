@@ -172,6 +172,10 @@
 	
 	NSTask *theTask = [[[NSTask alloc] init] autorelease];
 	
+	// At some point pdftotext started reporting an error if the
+	// PAPERSIZE environment variable was not set. Default to A4.
+	[theTask setEnvironment:[[NSDictionary dictionaryWithObject:@"A4" forKey:@"PAPERSIZE"] autorelease]];
+	
 	if (AMKDebug) NSLog(@"Setting current path to: %@", [[NSBundle mainBundle] resourcePath]);
 	[theTask setCurrentDirectoryPath:[[NSBundle mainBundle] resourcePath]];
 	
