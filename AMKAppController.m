@@ -66,6 +66,7 @@
  *	at this point, we can use instance-specific methods in here.
  *
  *	Deal with begging for money here.
+ *	Also load explanatory PDF/text.
  */
 - (void)awakeFromNib {
 	
@@ -83,6 +84,14 @@
 	
 	// Focus not restored after begging for money, so re-focus main window
 	[mainWindow makeKeyAndOrderFront:self];
+	
+	// Load default PDF and text
+	PDFDocument *pdfDoc;
+	pdfDoc = [[[PDFDocument alloc] initWithURL:[[NSBundle mainBundle] URLForResource:@"defaultPdf"
+																	   withExtension:@"pdf"]]
+			  autorelease];
+	[pdfViewPane setDocument:pdfDoc];
+	[textOutputPreview setString:NSLocalizedString(@"defaultTextPreview", @"...the output will be displayed here.")];
 }
 
 
@@ -144,6 +153,14 @@
 	}
 	
 	return NO;
+}
+
+/*
+ *	Make app quit when last window is closed.
+ */
+-(BOOL) applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication
+{
+	return YES;
 }
 
 

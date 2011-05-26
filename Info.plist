@@ -46,7 +46,7 @@
 	<key>CFBundleGetInfoString</key>
 	<string>1.0</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2009 Aaron Madlon-Kay</string>
+	<string>Copyright © 2011 Aaron Madlon-Kay</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>

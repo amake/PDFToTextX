@@ -1,4 +1,7 @@
-﻿/* Donate */
+﻿/* ...the output will be displayed here. */
+"defaultTextPreview" = "…テキストがここに表示されます。";
+
+/* Donate */
 "donateButton1" = "寄付する";
 
 /* Not now */
