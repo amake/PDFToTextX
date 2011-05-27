@@ -55,7 +55,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D1107260486CEB800E47090 /* PDFtoText X */;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
 			remoteInfo = "PDFtoText X";
 		};
 /* End PBXContainerItemProxy section */

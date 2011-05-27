@@ -271,7 +271,6 @@
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>8D5C4EAB0FA6F03400B9456E</string>
 								<string>1C37FBAC04509CD000000102</string>
-								<string>C448DE5C138F6B0A00632126</string>
 								<string>1C37FAAC04509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
@@ -283,7 +282,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 260}, {185, 574}}</string>
+							<string>{{0, 238}, {185, 574}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -300,7 +299,7 @@
 							<real>185</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>180 140 983 633 0 0 1280 778 </string>
+						<string>180 145 983 633 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -316,7 +315,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>C4F47F490F90396000762447</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Info.plist</string>
+								<string>batch.html</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -324,11 +323,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>C4F47F4A0F90396000762447</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Info.plist</string>
+										<string>batch.html</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>C448DEA8138F8B4900632126</string>
+										<string>C448DEDB138F928C00632126</string>
 										<key>history</key>
 										<array>
 											<string>C417FF370F9388670031A2E9</string>
@@ -361,14 +360,9 @@
 											<string>C448DE38138F646400632126</string>
 											<string>C448DE39138F646400632126</string>
 											<string>C448DE3A138F646400632126</string>
-											<string>C448DE73138F788200632126</string>
 											<string>C448DE75138F788200632126</string>
-											<string>C448DE77138F788200632126</string>
 											<string>C448DE79138F788200632126</string>
-											<string>C448DE7A138F788200632126</string>
 											<string>C448DE7B138F788200632126</string>
-											<string>C448DE7C138F788200632126</string>
-											<string>C448DE7D138F788200632126</string>
 											<string>C448DE7E138F788200632126</string>
 											<string>C448DE7F138F788200632126</string>
 											<string>C448DE80138F788200632126</string>
@@ -378,9 +372,11 @@
 											<string>C448DE85138F788200632126</string>
 											<string>C448DE86138F788200632126</string>
 											<string>C448DEA3138F8B4900632126</string>
-											<string>C448DEA4138F8B4900632126</string>
-											<string>C448DEA5138F8B4900632126</string>
-											<string>C448DEA7138F8B4900632126</string>
+											<string>C448DEBB138F927900632126</string>
+											<string>C448DEBC138F927900632126</string>
+											<string>C448DEBD138F927900632126</string>
+											<string>C448DEBE138F927900632126</string>
+											<string>C448DEC0138F927900632126</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -394,18 +390,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {776, 386}}</string>
+								<string>{{0, 0}, {776, 379}}</string>
 								<key>RubberWindowFrame</key>
-								<string>180 140 983 633 0 0 1280 778 </string>
+								<string>180 145 983 633 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>386pt</string>
+							<string>379pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>201pt</string>
+							<string>208pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -419,7 +415,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {776, 174}}</string>
+										<string>{{10, 27}, {377, -27}}</string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -441,6 +437,8 @@
 									<string>PBXProjectFindModule</string>
 								</dict>
 								<dict>
+									<key>BecomeActive</key>
+									<true/>
 									<key>ContentConfiguration</key>
 									<dict>
 										<key>PBXCVSModuleFilterTypeKey</key>
@@ -474,7 +472,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {776, 174}}</string>
+										<string>{{10, 27}, {776, 181}}</string>
+										<key>RubberWindowFrame</key>
+										<string>180 145 983 633 0 0 1280 778 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXCVSModule</string>
@@ -495,8 +495,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {776, 174}}</string>
-										<key>RubberWindowFrame</key>
-										<string>180 140 983 633 0 0 1280 778 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -524,11 +522,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>C448DE3D138F646400632126</string>
+				<string>C448DEDD138F928C00632126</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>C448DE3E138F646400632126</string>
+				<string>C448DEDE138F928C00632126</string>
 				<string>C4F47F490F90396000762447</string>
-				<string>C448DE3F138F646400632126</string>
+				<string>C448DEDF138F928C00632126</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -716,14 +714,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>C448DEA9138F8B4900632126</string>
-		<string>C4F480930F9061E500762447</string>
-		<string>C448DE47138F646400632126</string>
-		<string>C448DE48138F646400632126</string>
 		<string>/Users/amake/Documents/Projects/PDFtoText X/PDFtoText X.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>180 140 983 633 0 0 1280 778 </string>
+	<string>180 145 983 633 0 0 1280 778 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
