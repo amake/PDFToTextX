@@ -118,8 +118,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 328073841;
-			PBXWorkspaceStateSaveDate = 328073841;
+			PBXPerProjectTemplateStateSaveDate = 328149722;
+			PBXWorkspaceStateSaveDate = 328149722;
 		};
 		perUserProjectItems = {
 			C417FF370F9388670031A2E9 = C417FF370F9388670031A2E9 /* PBXTextBookmark */;
@@ -141,9 +141,12 @@
 			C448D5B7138E00DE00632126 = C448D5B7138E00DE00632126 /* PBXTextBookmark */;
 			C448D5B8138E00DE00632126 = C448D5B8138E00DE00632126 /* PBXTextBookmark */;
 			C448D5B9138E00DE00632126 = C448D5B9138E00DE00632126 /* PlistBookmark */;
-			C448D5BA138E00DE00632126 = C448D5BA138E00DE00632126 /* PBXTextBookmark */;
-			C448D5BC138E00DE00632126 = C448D5BC138E00DE00632126 /* PBXTextBookmark */;
-			C448D6DF138E026900632126 = C448D6DF138E026900632126 /* PBXTextBookmark */;
+			C448D824138E042000632126 = C448D824138E042000632126 /* PBXTextBookmark */;
+			C448D825138E042000632126 = C448D825138E042000632126 /* PBXTextBookmark */;
+			C448D961138F2AD700632126 = C448D961138F2AD700632126 /* PBXTextBookmark */;
+			C448D963138F2AD700632126 = C448D963138F2AD700632126 /* PBXTextBookmark */;
+			C448D964138F2AD700632126 = C448D964138F2AD700632126 /* PBXTextBookmark */;
+			C448DA98138F2AED00632126 /* PBXTextBookmark */ = C448DA98138F2AED00632126 /* PBXTextBookmark */;
 			C4E71A850F99626B0006D697 = C4E71A850F99626B0006D697 /* PBXTextBookmark */;
 			C4E71B580F99AA6D0006D697 = C4E71B580F99AA6D0006D697 /* PBXTextBookmark */;
 			C4E71C0D0FA0A6990006D697 = C4E71C0D0FA0A6990006D697 /* PBXTextBookmark */;
@@ -312,14 +315,14 @@
 	};
 	C448D54E138DEEA000632126 /* AMKDragPdfView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {715, 378}}";
+			sepNavIntBoundsRect = "{{0, 0}, {715, 392}}";
 			sepNavSelRange = "{243, 0}";
 			sepNavVisRange = "{0, 249}";
 		};
 	};
 	C448D54F138DEEA000632126 /* AMKDragPdfView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {715, 1599}}";
+			sepNavIntBoundsRect = "{{0, 0}, {715, 1612}}";
 			sepNavSelRange = "{262, 7}";
 			sepNavVisRange = "{0, 626}";
 		};
@@ -449,7 +452,17 @@
 		rLen = 0;
 		rLoc = 9223372036854775808;
 	};
-	C448D5BA138E00DE00632126 /* PBXTextBookmark */ = {
+	C448D824138E042000632126 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C448D54F138DEEA000632126 /* AMKDragPdfView.m */;
+		name = "AMKDragPdfView.m: 14";
+		rLen = 7;
+		rLoc = 262;
+		rType = 0;
+		vrLen = 626;
+		vrLoc = 0;
+	};
+	C448D825138E042000632126 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = C448D54E138DEEA000632126 /* AMKDragPdfView.h */;
 		name = "AMKDragPdfView.h: 15";
@@ -459,24 +472,70 @@
 		vrLen = 249;
 		vrLoc = 0;
 	};
-	C448D5BC138E00DE00632126 /* PBXTextBookmark */ = {
+	C448D829138E042000632126 /* PDFtoText X Help.html */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.html;
+		name = "PDFtoText X Help.html";
+		path = "/Users/amake/Documents/Projects/PDFtoText X/English.lproj/PDFtoText X Help/PDFtoText X Help.html";
+		sourceTree = "<absolute>";
+	};
+	C448D961138F2AD700632126 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = C448D54F138DEEA000632126 /* AMKDragPdfView.m */;
-		name = "AMKDragPdfView.m: 14";
-		rLen = 7;
-		rLoc = 262;
+		fRef = C448D962138F2AD700632126 /* configure.html */;
+		name = "configure.html: 1";
+		rLen = 0;
+		rLoc = 0;
 		rType = 0;
-		vrLen = 576;
+		vrLen = 2269;
+		vrLoc = 2062;
+	};
+	C448D962138F2AD700632126 /* configure.html */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.html;
+		name = configure.html;
+		path = "/Users/amake/Documents/Projects/PDFtoText X/English.lproj/PDFtoText X Help/html/configure.html";
+		sourceTree = "<absolute>";
+	};
+	C448D963138F2AD700632126 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C448D829138E042000632126 /* PDFtoText X Help.html */;
+		name = "PDFtoText X Help.html: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1023;
 		vrLoc = 0;
 	};
-	C448D6DF138E026900632126 /* PBXTextBookmark */ = {
+	C448D964138F2AD700632126 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = C448D54F138DEEA000632126 /* AMKDragPdfView.m */;
-		name = "AMKDragPdfView.m: 14";
-		rLen = 7;
-		rLoc = 262;
+		fRef = C448D965138F2AD700632126 /* PDFtoText X Help.html */;
+		name = "PDFtoText X Help.html: 1";
+		rLen = 0;
+		rLoc = 0;
 		rType = 0;
-		vrLen = 626;
+		vrLen = 1023;
+		vrLoc = 0;
+	};
+	C448D965138F2AD700632126 /* PDFtoText X Help.html */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.html;
+		name = "PDFtoText X Help.html";
+		path = "/Users/amake/Documents/Projects/PDFtoText X/English.lproj/PDFtoText X Help/PDFtoText X Help.html";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {859, 380}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1023}";
+		};
+	};
+	C448DA98138F2AED00632126 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C448D965138F2AD700632126 /* PDFtoText X Help.html */;
+		name = "PDFtoText X Help.html: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1023;
 		vrLoc = 0;
 	};
 	C4E71A450F995BA40006D697 /* LICENSE.rtf */ = {
