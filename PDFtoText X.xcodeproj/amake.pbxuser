@@ -8,10 +8,10 @@
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Release;
 		activeExecutable = C4F47D7D0F9037CD00762447 /* PDFtoText X */;
 		activeSDKPreference = macosx10.6;
-		activeTarget = 8D1107260486CEB800E47090 /* PDFtoText X */;
+		activeTarget = C448DE52138F69DA00632126 /* Distribution */;
 		addToTargets = (
 			8D1107260486CEB800E47090 /* PDFtoText X */,
 		);
@@ -193,6 +193,16 @@
 			C448DDCA138F5A1800632126 = C448DDCA138F5A1800632126 /* PBXBookmark */;
 			C448DDCB138F5A1800632126 = C448DDCB138F5A1800632126 /* PBXBookmark */;
 			C448DDCC138F5A1800632126 = C448DDCC138F5A1800632126 /* PBXBookmark */;
+			C448DE38138F646400632126 /* PBXBookmark */ = C448DE38138F646400632126 /* PBXBookmark */;
+			C448DE39138F646400632126 /* PBXTextBookmark */ = C448DE39138F646400632126 /* PBXTextBookmark */;
+			C448DE3A138F646400632126 /* PBXTextBookmark */ = C448DE3A138F646400632126 /* PBXTextBookmark */;
+			C448DE3B138F646400632126 /* PlistBookmark */ = C448DE3B138F646400632126 /* PlistBookmark */;
+			C448DE3C138F646400632126 /* PlistBookmark */ = C448DE3C138F646400632126 /* PlistBookmark */;
+			C448DE4B138F664900632126 /* PlistBookmark */ = C448DE4B138F664900632126 /* PlistBookmark */;
+			C448DE4C138F66AE00632126 /* PlistBookmark */ = C448DE4C138F66AE00632126 /* PlistBookmark */;
+			C448DE4D138F682E00632126 /* PlistBookmark */ = C448DE4D138F682E00632126 /* PlistBookmark */;
+			C448DE5D138F6B0A00632126 /* PlistBookmark */ = C448DE5D138F6B0A00632126 /* PlistBookmark */;
+			C448DE5E138F6BCD00632126 /* PlistBookmark */ = C448DE5E138F6BCD00632126 /* PlistBookmark */;
 			C4E71A850F99626B0006D697 = C4E71A850F99626B0006D697 /* PBXTextBookmark */;
 			C4E71B580F99AA6D0006D697 = C4E71B580F99AA6D0006D697 /* PBXTextBookmark */;
 			C4E71C0D0FA0A6990006D697 = C4E71C0D0FA0A6990006D697 /* PBXTextBookmark */;
@@ -511,6 +521,11 @@
 		name = "PDFtoText X Help.html";
 		path = "/Users/amake/Documents/Projects/PDFtoText X/English.lproj/PDFtoText X Help/PDFtoText X Help.html";
 		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {859, 390}}";
+			sepNavSelRange = "{738, 26}";
+			sepNavVisRange = "{39, 1047}";
+		};
 	};
 	C448DBD3138F306000632126 /* advanced.html */ = {
 		isa = PBXFileReference;
@@ -887,6 +902,117 @@
 		path = "/Users/amake/Documents/Projects/PDFtoText X/Japanese.lproj/PDFtoText X Help/images/main-window.png";
 		sourceTree = "<absolute>";
 	};
+	C448DE38138F646400632126 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = C448DDCD138F5A1800632126 /* main-window.png */;
+	};
+	C448DE39138F646400632126 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C448DA9D138F2B5800632126 /* PDFtoText X Help.html */;
+		name = "PDFtoText X Help.html: 19";
+		rLen = 26;
+		rLoc = 738;
+		rType = 0;
+		vrLen = 1047;
+		vrLoc = 39;
+	};
+	C448DE3A138F646400632126 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C4F4802C0F9053B600762447 /* AMKPdfDumper.h */;
+		name = "AMKPdfDumper.h: 21";
+		rLen = 0;
+		rLoc = 370;
+		rType = 0;
+		vrLen = 370;
+		vrLoc = 0;
+	};
+	C448DE3B138F646400632126 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleHelpBookFolder,
+		);
+		name = "/Users/amake/Documents/Projects/PDFtoText X/Info.plist";
+		rLen = 0;
+		rLoc = 0;
+	};
+	C448DE3C138F646400632126 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundlePackageType,
+		);
+		name = "/Users/amake/Documents/Projects/PDFtoText X/Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	C448DE4B138F664900632126 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundlePackageType,
+		);
+		name = "/Users/amake/Documents/Projects/PDFtoText X/Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	C448DE4C138F66AE00632126 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundlePackageType,
+		);
+		name = "/Users/amake/Documents/Projects/PDFtoText X/Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	C448DE4D138F682E00632126 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundlePackageType,
+		);
+		name = "/Users/amake/Documents/Projects/PDFtoText X/Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	C448DE52138F69DA00632126 /* Distribution */ = {
+		activeExec = 0;
+	};
+	C448DE5D138F6B0A00632126 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundlePackageType,
+		);
+		name = "/Users/amake/Documents/Projects/PDFtoText X/Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	C448DE5E138F6BCD00632126 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundlePackageType,
+		);
+		name = "/Users/amake/Documents/Projects/PDFtoText X/Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
 	C4E71A450F995BA40006D697 /* LICENSE.rtf */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {735, 9450}}";
@@ -910,9 +1036,6 @@
 			sepNavSelRange = "{1178, 0}";
 			sepNavVisRange = "{0, 1178}";
 		};
-	};
-	C4E71AA80F9966C70006D697 /* Distribution */ = {
-		activeExec = 0;
 	};
 	C4E71B580F99AA6D0006D697 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -1067,7 +1190,7 @@
 	};
 	C4F4802C0F9053B600762447 /* AMKPdfDumper.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {715, 370}}";
+			sepNavIntBoundsRect = "{{0, 0}, {715, 331}}";
 			sepNavSelRange = "{370, 0}";
 			sepNavVisRange = "{0, 370}";
 		};
