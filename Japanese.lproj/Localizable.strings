@@ -5,7 +5,7 @@
 "donateButton1" = "寄付する";
 
 /* Not now */
-"donateButton2" = "寄付しない";
+"donateButton2" = "今回はしない";
 
 /* Don't ask again */
 "donateButton3" = "二度と表示しない";
