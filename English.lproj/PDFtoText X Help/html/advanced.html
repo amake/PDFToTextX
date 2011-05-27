@@ -3,18 +3,71 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-        <title>Removing an iPod</title>
+        <title>Advanced settings</title>
         <link href="../styles/standard.css" rel="stylesheet" media="all" />
     </head>
     <body>
-        <p><a href="../iPodBackupHelp.html">iPodBackup Help</a></p>
-        <h1><img src="../images/icon32.png" alt="[icon]" />Removing an iPod</h1>
+        <p><a href="../PDFtoText X Help.html">PDFtoText X Help</a></p>
+        <h1><img src="../images/icon32.png" alt="[icon]" />Advanced settings</h1>
         <div id="main">
-        <p>If you no longer want to use a certain iPod with iPodBackup, it is recommended that you remove the iPod from iPodBackup's preferences.</p>
-        <p>Note:  If you only want to temporarily prevent an iPod from being backed up to, you can simply uncheck the checkbox next to the iPod's name in the Preferences window.</p>
-        <p>To remove an iPod, first go to "Preferences..." in the iPodBackup application menu.  Then select an iPod in the list and click the <img src="../images/minusbutton.png" alt="[-]" height="14px" /> button near the bottom of the window.  A sheet will appear asking if you want to delete the backup.</p>
-        <img src="../images/removeipodsheet.png" alt="[Remove iPod sheet screenshot]" class="screenshot" />
-        <p>If you choose to delete the backup data, the folder or disk image will be permanently erased.  If you choose not to delete, the folder or disk image will be renamed to <code>username disabled</code> or <code>username disabled.sparseimage</code>, respectively.</p>
+        <p>PDFtoText X is a graphical frontend for a command line tool called <code>pdftotext</code>. Most of the advanced settings offered by PDFtoText correspond to the various arguments you can supply when invoking <code>pdftotext</code> in the Terminal.</p>
+		<p>Advanced settings are offered on the main window and in the Preferences window.</p>
+        <h2>Main window</h2>
+		<p>Descriptions below taken from the <code>pdftotext</code> manpage.</p>
+		<table>
+			<tr>
+				<th>Setting</th>
+				<th>Description</th>
+				<th>Command line equivalent</th>
+			</tr>
+			<tr>
+				<td>Mimic original layout</td>
+				<td>Maintain (as best as possible) the original physical layout of the text. The default is to 'undo' physical layout (columns, hyphenation, etc.) and output the text in reading order.</td>
+				<td><code>-layout</code></td>
+			</tr>
+			<tr>
+				<td>Insert pagebreaks</td>
+				<td>Don't insert page breaks (form feed characters) between pages (when unchecked).</td>
+				<td><code>-nopgbrk</code> (when unchecked)</td>
+			</tr>
+			<tr>
+				<td>Raw output</td>
+				<td>Keep the text in content stream order.  This is a hack which often "undoes" column formatting, etc.  Use of raw mode is no longer recommended.</td>
+				<td><code>-raw</code></td>
+			</tr>
+			<tr>
+				<td rowspan="2">Pages</td>
+				<td>Specifies the first page to convert.</td>
+				<td><code>-f</code></td>
+			</tr>
+			<tr>
+				<td>Specifies the last page to convert.</td>
+				<td><code>-t</code></td>
+			</tr>
+			<tr>
+				<td>Line endings</td>
+				<td>Sets the end-of-line convention to use for text output.  (Default: unix)</td>
+				<td><code>-eol</code></td>
+			</tr>
+			<tr>
+				<td>Encoding</td>
+				<td>Sets the encoding to use for text output.  (Default: UTF-8)</td>
+				<td><code>-enc</code></td>
+			</tr>
+			<tr>
+				<td>Use password: Owner</td>
+				<td>Specify the owner password for the PDF file.  Providing this will bypass all security restrictions.</td>
+				<td><code>-opw</code></td>
+			</tr>
+			<tr>
+				<td>Use password: User</td>
+				<td>Specify the user password for the PDF file.</td>
+				<td><code>-upw</code></td>
+			</tr>
+		</table>
+		<p>Use the "Reset all" button to restore all settings to their defaults.</p>
+		<h2>Preferences window</h2>
+		<p>"Use custom <code>pdftotext</code> binary" allows you to specify a particular version of <code>pdftotext</code> to use in place of the one bundled with PDFtoText X. Note that unpredictable behavior may occur if the binary you specify is not compatible with the same command line options as the bundled version.</p>
 		</div>
     </body>
 </html>

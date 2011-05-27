@@ -3,18 +3,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-        <title>Removing an iPod</title>
+        <title>PDF からテキストを抽出する</title>
         <link href="../styles/standard.css" rel="stylesheet" media="all" />
     </head>
     <body>
-        <p><a href="../iPodBackupHelp.html">iPodBackup Help</a></p>
-        <h1><img src="../images/icon32.png" alt="[icon]" />Removing an iPod</h1>
+        <p><a href="../PDFtoText X Help.html">PDFtoText X ヘルプ</a></p>
+        <h1><img src="../images/icon32.png" alt="[PDFtoText X icon]" />PDF からテキストを抽出する</h1>
         <div id="main">
-        <p>If you no longer want to use a certain iPod with iPodBackup, it is recommended that you remove the iPod from iPodBackup's preferences.</p>
-        <p>Note:  If you only want to temporarily prevent an iPod from being backed up to, you can simply uncheck the checkbox next to the iPod's name in the Preferences window.</p>
-        <p>To remove an iPod, first go to "Preferences..." in the iPodBackup application menu.  Then select an iPod in the list and click the <img src="../images/minusbutton.png" alt="[-]" height="14px" /> button near the bottom of the window.  A sheet will appear asking if you want to delete the backup.</p>
-        <img src="../images/removeipodsheet.png" alt="[Remove iPod sheet screenshot]" class="screenshot" />
-        <p>If you choose to delete the backup data, the folder or disk image will be permanently erased.  If you choose not to delete, the folder or disk image will be renamed to <code>username disabled</code> or <code>username disabled.sparseimage</code>, respectively.</p>
-		</div>
+			<h2>抽出</h2>
+            <p>PDFtoText X で、 PDF ファイルに収録されているすべてのテキストデータを簡単に抽出・保存できます。</p>
+			<p>まずは以下のいずれかの手段で PDF ファイルを入力します。</p>
+			<ul>
+				<li>ファイルメニューの「開く...」を選択する</li>
+				<li>メインウィンドウの「ファイルを選択...」ボタンをクリックする</li>
+				<li>PDF ファイルをメインウィンドウにドラッグ＆ドロップする</li>
+				<li>PDF ファイルを、Finder まはた Dock 内のアプリケーションアイコンにドラッグ＆ドロップする</li>
+			</ul>
+			<p>「テキストプレビューを自動更新」が入になっている場合、抽出されたテキストは自動的にウィンドウの右側にある表示枠に表示されます。同設定が切の場合は「実行」ボタンをクリックすると処理が開始されます。処理は普段速いですが、低速なネットワーク接続を通して大容量の PDF ファイルにアクセスしている場合などは数秒かかることがあります。</p>
+			<p>抽出の設定については<a href="advanced.html">詳細設定</a>をご参照ください。</p>
+			<p>抽出されたテキストはプレビューの表示枠内で編集し保存することができます。</p>
+			<h2>保存</h2>
+			<p>抽出開始時に「抽出したテキストを自動的に以下の場所に保存する」が入になっていた場合、抽出テキストはすでに指定フォルダ内に保存されています。例えばもとの PDF ファイル名が <code>MyDocument.pdf</code> の場合、抽出テキストは <code>MyDocument.txt</code> という名称で保存されます。</p>
+			<p>抽出テキストが自動的に保存されていない場合、または抽出後テキストプレビューで編集を行なった場合、「保存...」ボタンをクリックして保存するか、「コピー」ボタンをクリックしてクリップボードにコピーします。</p>
+        </div>
     </body>
 </html>

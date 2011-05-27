@@ -3,50 +3,71 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-        <title>Configuring an iPod</title>
+        <title>詳細設定</title>
         <link href="../styles/standard.css" rel="stylesheet" media="all" />
     </head>
     <body>
-        <p><a href="../iPodBackupHelp.html">iPodBackup Help</a></p>
-        <h1><img src="../images/icon32.png" alt="[iPodBackup icon]" />Configuring an iPod</h1>
-        <div id="main">  
-            <p>Before you can begin backing up, you must configure an iPod.  This "registers" the iPod with iPodBackup so that the program knows what to do with it.</p>
-            <p>When iPodBackup launches, it checks to see if there are any mounted iPods.  If there are mounted iPods, but no configured iPods, the Add iPod sheet will automatically appear.</p>
-            <p>To open the sheet manually, go to "Preferences..." in the iPodBackup application menu.  Then click the <img src="../images/plusbutton.png" alt="[+]" height="14px" /> button near the bottom of the window.</p>
-            <img src="../images/addipodsheet.png" alt="[Add iPod sheet screenshot]" class="screenshot" />
-            <p>If you have more than one iPod mounted, choose the one you want to backup to from the popup menu.  Be sure to check the iPod's free space before continuing!  You can configure any number of iPods to be backed up with iPodBackup, each with its own backup style and rules.</p>
-            <p>You may choose to backup to either a folder or a disk image on the iPod.  Both approaches have pros and cons.</p>
-            <h3><img src="../images/folder32.png" alt="[Folder icon]" />Folder backups</h3>
-            <p>When you configure a Folder backup, a new folder will be created at <code>Your iPod/Users/username</code>.  The contents of your home folder will be copied into this folder.</p>
-            <p>Pros:</p>
-            <ul>
-                <li>Folders are simple</li>
-                <li>Folders work well with booting OS X from your iPod</li>
-            </ul>
-            <p>Cons:</p>
-            <ul>
-                <li>Folders don't offer privacy</li>
-                <li>Manipulating folders with lots of items in them can be time-consuming</li>
-                <li>Folders can't be used on FAT32 (Windows) formatted iPods</li>
-            </ul>
-            <h3><img src="../images/diskimage32.png" alt="[Disk image icon]" />Disk image backups</h3>
-            <p>When you configure a Disk image backup, a blank disk image file will be created at <code>Your iPod/Users/username.sparseimage</code>.  A sparse disk image is a special format of disk image that can dynamically grow in size as files are added to it.  iPodBackup makes sparseimages with a maximum size of 95% the size of your iPod's hard drive.</p>
-            <p>The disk image can be either encrypted or unencrypted.  The encryption is handled transparently by OS X.</p>
-            <p>Pros:</p>
-            <ul>
-                <li>Disk images can be encrypted so your data is protected</li>
-                <li>Disk images work on FAT32 formatted iPods</li>
-                <li>A disk image is a single file, which can be easier to manipulate</li>
-            </ul>
-            <p>Cons:</p>
-            <ul>
-                <li>Disk images have to be mounted before you can access their contents</li>
-                <li>If you lose the password to an encrypted disk image, your data is likely gone forever.  It is recommended that you have OS X store your disk image's password in the Keychain.</li>
-                <li>Similarly, if the disk image becomes corrupted, your data is likely gone forever.  Don't try to view the disk image in iPodLinux's file browser!</li>
-                <li>Disk images can't be mounted on Windows machines</li>
-                <li>When deleting items from a disk image, the size of the disk image does not decrease unless you compact it.  Compacting can be time consuming depending on the size of the image, and whether or not it's encrypted.</li>
-            </ul>
-            <p>That said, the author of iPodBackup personally prefers disk images.</p>
-        </div>
+        <p><a href="../PDFtoText X Help.html">PDFtoText X ヘルプ</a></p>
+        <h1><img src="../images/icon32.png" alt="[icon]" />詳細設定</h1>
+        <div id="main">
+        <p>PDFtoText X は <code>pdftotext</code> というコマンドラインツールを UI 化したものです。 PDFtoText X の詳細設定のほとんどは、 <code>pdftotext</code> をターミナルなどで実行するときに指定できる引数に相当します。</p>
+		<p>詳細設定はメインウィンドウと環境設定で設定できます。</p>
+        <h2>メインウィンドウ</h2>
+		<p>以下の説明文は <code>pdftotext</code> の manpage 内容を翻訳したものです。</p>
+		<table>
+			<tr>
+				<th>名前</th>
+				<th>説明</th>
+				<th>コマンドライン</th>
+			</tr>
+			<tr>
+				<td>もとのレイアウトを模倣</td>
+				<td>PDF のとおりのテキスト配置をなるべく正確に再現する。逆にデフォルトではテキストの位置関係やハイフン処理を排除して素のテキストを出力する。</td>
+				<td><code>-layout</code></td>
+			</tr>
+			<tr>
+				<td>改ページを挿入</td>
+				<td>ページの間に改ページ（form feed 文字）を挿入しない（チェック解除時）。</td>
+				<td><code>-nopgbrk</code> （解除時）</td>
+			</tr>
+			<tr>
+				<td>Raw output</td>
+				<td>Keep the text in content stream order.  This is a hack which often "undoes" column formatting, etc.  Use of raw mode is no longer recommended.</td>
+				<td><code>-raw</code></td>
+			</tr>
+			<tr>
+				<td rowspan="2">ページ</td>
+				<td>出力する最初のページを指定する。</td>
+				<td><code>-f</code></td>
+			</tr>
+			<tr>
+				<td>出力する最後のページを指定する。</td>
+				<td><code>-t</code></td>
+			</tr>
+			<tr>
+				<td>改行文字</td>
+				<td>改行文字の種類を設定する。（デフォルトは「unix」）</td>
+				<td><code>-eol</code></td>
+			</tr>
+			<tr>
+				<td>テキストエンコーディング</td>
+				<td>出力のテキストエンコーディングを設定する。（デフォルトは「UTF-8」）</td>
+				<td><code>-enc</code></td>
+			</tr>
+			<tr>
+				<td>パスワードを使用　作成者</td>
+				<td>PDF の作成者パスワードを指定し、すべての制限を解除する。</td>
+				<td><code>-opw</code></td>
+			</tr>
+			<tr>
+				<td>パスワードを使用　閲覧者</td>
+				<td>PDF の閲覧者パスワードを指定する。</td>
+				<td><code>-upw</code></td>
+			</tr>
+		</table>
+		<p>「初期値に戻す」ボタンをクリックして以上のすべての設定をデフォルト値に戻します。</p>
+		<h2>環境設定ウィンドウ</h2>
+		<p>「<code>pdftotext</code> バイナリを指定」すると、本アプリケーションが提供しているバージョン以外の <code>pdftotext</code> を代用できます。ただし、指定したバイナリが同様の引数に対応していない場合は誤動作する可能性があります。</p>
+		</div>
     </body>
 </html>
