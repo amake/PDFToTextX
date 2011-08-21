@@ -13,7 +13,7 @@
 
 @implementation AMKAppController
 
-@synthesize inputFilePath, outputFilePath;
+@synthesize inputFileURL, outputFileURL;
 
 
 //////////	Initialization & delegate methods
@@ -107,7 +107,7 @@
 	
 	// Only accept file if it's a PDF.  May need better (UTI) validation here.
 	if ([extension caseInsensitiveCompare:@"pdf"] == NSOrderedSame) {
-		[self setInputFilePath:filename];
+		[self setInputFileURL:[NSURL fileURLWithPath:filename]];
 		[self updateFileDisplay];
 		[self autoRefresh:nil];
 		return YES;
@@ -179,18 +179,17 @@
 	[openPanel setCanChooseFiles:YES];
 	[openPanel setCanChooseDirectories:NO];
 	[openPanel setAllowsMultipleSelection:NO];
+    [openPanel setAllowedFileTypes:[NSArray arrayWithObject:@"pdf"]];
 
 	// Proceed if user pressed "OK"
-	if ( [openPanel runModalForDirectory:nil
-									file:nil
-								   types:[NSArray arrayWithObject:@"pdf"]] == NSOKButton )
+	if ( [openPanel runModal] == NSOKButton )
 	{
 
 		// Get filename from array returned by panel
-		NSArray *files = [openPanel filenames];
-		NSString *filePath = [files objectAtIndex:0];
+		NSArray *files = [openPanel URLs];
+		NSURL *fileURL = [files objectAtIndex:0];
 		
-		[self setInputFilePath:filePath];
+		[self setInputFileURL:fileURL];
 		
 		[self updateFileDisplay];
 		
@@ -243,13 +242,13 @@
 	[openPanel setAllowsMultipleSelection:NO];
 	
 	// Proceed if user pressed "OK"
-	if ( [openPanel runModalForTypes:nil] == NSOKButton )
+	if ( [openPanel runModal] == NSOKButton )
 	{
 		// Get filename from array returned by panel
-		NSArray *files = [openPanel filenames];
-		NSString *folderPath = [files objectAtIndex:0];
+		NSArray *files = [openPanel URLs];
+		NSURL *folderPath = [files objectAtIndex:0];
 		
-		[[NSUserDefaults standardUserDefaults] setObject:folderPath forKey:AMKOutputFolderKey];
+		[[NSUserDefaults standardUserDefaults] setObject:[folderPath path] forKey:AMKOutputFolderKey];
 	}
 	
 }
@@ -261,14 +260,14 @@
 - (IBAction)processFile:(id)sender {
 	
 	// Don't proceed if input file is not set yet
-	if (![self inputFilePath]) {
+	if (![self inputFileURL]) {
 		if (AMKDebug) NSLog(@"No file to process");
 		return;
 	}
 	
 	// Initialize and execute the PDF dumping object
 	AMKPdfDumper *dumper = [[AMKPdfDumper alloc] init];
-	[dumper setInputFile:[self inputFilePath]];
+	[dumper setInputFile:[self inputFileURL]];
 	
 	[progressIndicator startAnimation:nil];
 	NSString *status = NSLocalizedString(@"processingStatus", @"Processing...");
@@ -276,10 +275,10 @@
 	[dumper dumpPdfToText];
 	[progressIndicator stopAnimation:nil];
 	
-	[self setOutputFilePath:[dumper outputFile]];
+	[self setOutputFileURL:[dumper outputFile]];
 	
 	// Load content of output file.  Guesses encoding automatically.
-	NSString *outputText = [NSString stringWithContentsOfFile:[self outputFilePath]
+	NSString *outputText = [NSString stringWithContentsOfURL:[self outputFileURL]
 												 usedEncoding:NULL
 														error:NULL];
 	if (outputText) {
@@ -338,18 +337,18 @@
 	NSSavePanel *panel = [NSSavePanel savePanel];
 	
 	// Save in same folder as input file by default
-	NSString *saveDirectory = [[self inputFilePath] stringByDeletingLastPathComponent];
+    [panel setDirectoryURL:[[self inputFileURL] URLByDeletingLastPathComponent]];
 	
 	// Keep original filename by default
-	NSString *outputFileName = [[[[self inputFilePath]
+	NSString *outputFileName = [[[[self inputFileURL]
 								  lastPathComponent]
 								 stringByDeletingPathExtension]
 								stringByAppendingPathExtension:@"txt"];
-	
+	if ([outputFileName length]) [panel setNameFieldStringValue:outputFileName];
 	// Run panel
-	if ([panel runModalForDirectory:saveDirectory file:outputFileName] == NSFileHandlingPanelOKButton) {
+	if ([panel runModal] == NSFileHandlingPanelOKButton) {
 		
-		[outputText writeToFile:[panel filename] atomically:YES encoding:NSUTF8StringEncoding error:nil];
+		[outputText writeToURL:[panel URL] atomically:YES encoding:NSUTF8StringEncoding error:nil];
 	}
 }
 
@@ -415,19 +414,19 @@
 - (void)updateFileDisplay {
 	
 	// Update icon and filename display in window
-	[inputFileNameField setStringValue:[[self inputFilePath] lastPathComponent]];
-	[inputFileIconWell setImage:[[NSWorkspace sharedWorkspace] iconForFile:[self inputFilePath]]];
+	[inputFileNameField setStringValue:[[self inputFileURL] lastPathComponent]];
+	[inputFileIconWell setImage:[[NSWorkspace sharedWorkspace] iconForFile:[[self inputFileURL] absoluteString]]];
 	
 	if ([[NSUserDefaults standardUserDefaults] boolForKey:AMKDisplayPDFKey]) {
 		
 		// Display PDF in window
 		PDFDocument *pdfDoc;
-		pdfDoc = [[[PDFDocument alloc] initWithURL:[NSURL fileURLWithPath:[self inputFilePath]]]
+		pdfDoc = [[[PDFDocument alloc] initWithURL:[self inputFileURL]]
 				  autorelease];
 		
 		// If PDF is locked, use user-specified password to unlock it.
 		NSString *password = [[NSUserDefaults standardUserDefaults] stringForKey:AMKPasswordKey];
-		if ([pdfDoc isLocked] || [pdfDoc isEncrypted] && password) {
+		if (([pdfDoc isLocked] || [pdfDoc isEncrypted]) && password) {
 			[pdfDoc unlockWithPassword:password];
 		}
 		

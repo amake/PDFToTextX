@@ -10,10 +10,12 @@
 
 
 @interface AMKPdfDumper : NSObject {
-	NSString *inputFile, *outputFile, *errorMessage;
+	NSURL *inputFile, *outputFile;
+    NSString *errorMessage;
 }
 
-@property(readwrite,copy) NSString *inputFile, *outputFile, *errorMessage;
+@property(readwrite,copy) NSURL *inputFile, *outputFile;
+@property(readwrite,copy) NSString *errorMessage;
 
 - (void)dumpPdfToText;
 

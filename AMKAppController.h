@@ -23,10 +23,10 @@
 	IBOutlet NSTextField *passwordField;
 	IBOutlet NSWindow *mainWindow;
 	
-	NSString *inputFilePath, *outputFilePath;
+	NSURL *inputFileURL, *outputFileURL;
 }
 
-@property(readwrite,copy) NSString *inputFilePath, *outputFilePath;
+@property(readwrite,copy) NSURL *inputFileURL, *outputFileURL;
 
 - (IBAction)processFile:(id)sender;
 - (IBAction)selectInputFile:(id)sender;

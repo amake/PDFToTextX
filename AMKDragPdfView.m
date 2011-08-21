@@ -92,7 +92,7 @@
 		AMKAppController *controller = [NSApp delegate];
 		
 		if ([files count] == 1) {
-			[controller setInputFilePath:[files objectAtIndex:0]];
+			[controller setInputFileURL:[NSURL fileURLWithPath:[files objectAtIndex:0]]];
 			[controller updateFileDisplay];
 			[controller autoRefresh:self];
 		} else {
@@ -102,7 +102,7 @@
 				// Process only PDFs
 				NSString *extension = [file pathExtension];
 				if ([extension caseInsensitiveCompare:@"pdf"] == NSOrderedSame) {
-					[controller setInputFilePath:file];
+					[controller setInputFileURL:[NSURL fileURLWithPath:file]];
 					[controller updateFileDisplay];
 					[controller processFile:self];
 				}

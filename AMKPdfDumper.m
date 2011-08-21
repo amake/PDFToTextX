@@ -48,9 +48,10 @@
 		if (!success && template != nil)
 			unlink(template);
 		if (fd >= 0)
-			close(fd);		
-		
-		[self setOutputFile:[[NSString alloc] initWithData:templateData encoding:NSUTF8StringEncoding]];
+			close(fd);
+        
+		NSString *path = [[NSString alloc] initWithData:templateData encoding:NSUTF8StringEncoding];
+		[self setOutputFile:[NSURL fileURLWithPath:path]];
 	}
 	
 	return self;
@@ -101,11 +102,11 @@
 	NSInteger endPage = [defaults integerForKey:AMKEndPageKey];
 			
 	if ((startPage > 0 && endPage > 0) && endPage >= startPage) {
-		if (AMKDebug) NSLog(@"Valid page range given: %d to %d", startPage, endPage);
+		if (AMKDebug) NSLog(@"Valid page range given: %ld to %ld", startPage, endPage);
 		PDFDocument *pdfDoc;
-		pdfDoc = [[[PDFDocument alloc] initWithURL:[NSURL fileURLWithPath:[self inputFile]]] autorelease];
+		pdfDoc = [[[PDFDocument alloc] initWithURL:[self inputFile]] autorelease];
 		if (endPage <= [pdfDoc pageCount]) {
-			if (AMKDebug) NSLog(@"PDF contains %d pages", [pdfDoc pageCount]);
+			if (AMKDebug) NSLog(@"PDF contains %lu pages", [pdfDoc pageCount]);
 			[args addObject:@"-f"];
 			[args addObject:[NSString stringWithFormat:@"%d", startPage]];
 			[args addObject:@"-l"];
@@ -144,12 +145,12 @@
 	
 	// Indicate input file
 	if (AMKDebug) NSLog(@"Setting input file");
-	[args addObject:[self inputFile]];
+	[args addObject:[[self inputFile] path]];
 	
 	// Indicate output file
 	if (AMKDebug) NSLog(@"Setting output file");
 	// User-defined output folder
-	NSString *outputFolder = [[defaults objectForKey:AMKOutputFolderKey] stringByExpandingTildeInPath];
+	NSURL *outputFolder = [NSURL fileURLWithPath:[[defaults objectForKey:AMKOutputFolderKey] stringByExpandingTildeInPath]];
 	
 	if ([defaults boolForKey:AMKAutoSaveKey] && ![defaults boolForKey:AMKOutputToPDFFolderKey]
 		&& outputFolder) {
@@ -158,16 +159,16 @@
 		// Get original filename
 		NSString *filename = [[[self inputFile] lastPathComponent] stringByDeletingPathExtension];
 		// Put original filename in output folder, add .txt
-		[self setOutputFile:[[outputFolder stringByAppendingPathComponent:filename]
-							 stringByAppendingPathExtension:@"txt"]];
-		[args addObject:[self outputFile]];
+		[self setOutputFile:[[outputFolder URLByAppendingPathComponent:filename]
+							 URLByAppendingPathExtension:@"txt"]];
+		[args addObject:[[self outputFile] path]];
 	} else if ([defaults boolForKey:AMKAutoSaveKey] && [defaults boolForKey:AMKOutputToPDFFolderKey])  {
 		// Save in same folder as input PDF (pdftotext default behavior).  No output path needed.
-		[self setOutputFile:[[[self inputFile] stringByDeletingPathExtension]
-							 stringByAppendingPathExtension:@"txt"]];
+		[self setOutputFile:[[[self inputFile] URLByDeletingPathExtension]
+							 URLByAppendingPathExtension:@"txt"]];
 	} else {
 		// Save to temp folder
-		[args addObject:[self outputFile]];
+		[args addObject:[[self outputFile] path]];
 	}
 	
 	NSTask *theTask = [[[NSTask alloc] init] autorelease];

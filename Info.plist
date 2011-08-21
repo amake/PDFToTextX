@@ -32,7 +32,7 @@
 	<key>CFBundleIconFile</key>
 	<string>PDFtoText X</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.madlon-kay.PDFtoText X</string>
+	<string>com.madlon-kay.PDFtoTextX</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -42,9 +42,9 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0b2</string>
+	<string>1.0b3</string>
 	<key>CFBundleGetInfoString</key>
-	<string>1.0b2</string>
+	<string>1.0b3</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2011 Aaron Madlon-Kay</string>
 	<key>NSMainNibFile</key>
@@ -54,7 +54,7 @@
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
 	<key>SUFeedURL</key>
-	<string>http://aaron.madlon-kay.com/software/pdftotext/appcast.xml</string>
+	<string>http://aaron.madlon-kay.com/software/pdftotextx/appcast.xml</string>
 	<key>CFBundleHelpBookFolder</key>
 	<string>PDFtoText X Help</string>
 	<key>CFBundleHelpBookName</key>
