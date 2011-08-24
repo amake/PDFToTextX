@@ -48,6 +48,8 @@
 		C4F4817F0F90626000762447 /* languages in Resources */ = {isa = PBXBuildFile; fileRef = C4F480950F90626000762447 /* languages */; };
 		C4F481D60F90634100762447 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F481D50F90634100762447 /* Quartz.framework */; };
 		C4F484570F90F4BC00762447 /* AMKKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F484560F90F4BC00762447 /* AMKKeys.m */; };
+		C4F9595814053A50002A9354 /* libpaper.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = C4F9595414053A0D002A9354 /* libpaper.1.dylib */; };
+		C4F9595914053A50002A9354 /* libz.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = C4F9595514053A0D002A9354 /* libz.1.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C4F9595814053A50002A9354 /* libpaper.1.dylib in CopyFiles */,
+				C4F9595914053A50002A9354 /* libz.1.dylib in CopyFiles */,
 				C448D1F713861EB200632126 /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +121,8 @@
 		C4F481D50F90634100762447 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
 		C4F484460F90F08800762447 /* AMKKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMKKeys.h; sourceTree = "<group>"; };
 		C4F484560F90F4BC00762447 /* AMKKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMKKeys.m; sourceTree = "<group>"; };
+		C4F9595414053A0D002A9354 /* libpaper.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpaper.1.dylib; sourceTree = "<group>"; };
+		C4F9595514053A0D002A9354 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libz.1.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +226,8 @@
 				8D1107310486CEB800E47090 /* Info.plist */,
 				8D5C4EAB0FA6F03400B9456E /* Credits.rtf */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				C4F9595414053A0D002A9354 /* libpaper.1.dylib */,
+				C4F9595514053A0D002A9354 /* libz.1.dylib */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 			);
 			name = Resources;
@@ -320,7 +328,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "#!/bin/sh\n\n#  distribution.sh\n#  PDFtoText X\n#\n#  Modified from Marc Liyanage's script:\n#  http://www.entropy.ch/blog/Developer/2008/09/22/Sparkle-Appcast-Automation-in-Xcode.html\n\nset -o errexit\n\n[ $CONFIGURATION = Release ] || { echo Distribution target requires \"'Release'\" configuration; env; false; }\n\nVERSION=$(defaults read \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.app/Contents/Info\" CFBundleVersion)\nDOWNLOAD_BASE_URL=\"http://aaron.madlon-kay.com/software/pdftotextx\"\nRELEASENOTES_URL=\"http://aaron.madlon-kay.com/software/pdftotextx/release-notes.html#version-$VERSION\"\n\nARCHIVE_FILENAME=\"$PROJECT_NAME $VERSION.zip\"\nDOWNLOAD_URL=\"$DOWNLOAD_BASE_URL/$ARCHIVE_FILENAME\"\nKEYCHAIN_PRIVKEY_NAME=\"Sparkle Private Key 1\"\n\nWD=$PWD\ncd \"$BUILT_PRODUCTS_DIR\"\nrm -f \"$PROJECT_NAME\"*.zip\nditto -ck --keepParent \"$PROJECT_NAME.app\" \"$ARCHIVE_FILENAME\"\n\nSIZE=$(stat -f %z \"$ARCHIVE_FILENAME\")\nPUBDATE=$(LC_TIME=en_US date +\"%a, %d %b %G %T %z\")\nSIGNATURE=$(\nopenssl dgst -sha1 -binary < \"$ARCHIVE_FILENAME\" \\\n| openssl dgst -dss1 -sign <(security find-generic-password -g -s \"$KEYCHAIN_PRIVKEY_NAME\" 2>&1 1>/dev/null | perl -pe '($_) = /\"(.+)\"/; s/\\\\012/\\n/g') \\\n| openssl enc -base64\n)\n\n[ $SIGNATURE ] || { echo Unable to load signing private key with name \"'$KEYCHAIN_PRIVKEY_NAME'\" from keychain; false; }\n\ncat <<EOF\n<item>\n<title>Version $VERSION</title>\n<sparkle:releaseNotesLink>$RELEASENOTES_URL</sparkle:releaseNotesLink>\n<pubDate>$PUBDATE</pubDate>\n<enclosure\nurl=\"$DOWNLOAD_URL\"\nsparkle:version=\"$VERSION\"\ntype=\"application/octet-stream\"\nlength=\"$SIZE\"\nsparkle:dsaSignature=\"$SIGNATURE\"\n/>\n</item>\nEOF\n\n#echo scp \"'$HOME/svn/my-cool-app/build/Release/$ARCHIVE_FILENAME'\" www.example.com:download/\n#echo scp \"'$WD/appcast.xml'\" www.example.com:web/software/my-cool-app/appcast.xml\n\ncp \"$ARCHIVE_FILENAME\" \"$HOME/sites/madlon-kay.com/aaron/software/pdftotextx/\"\ncp \"$ARCHIVE_FILENAME\" \"$HOME/sites/madlon-kay.com/aaron/software/pdftotextx/$PROJECT_NAME.zip\"";
+			shellScript = "#  Modified from Marc Liyanage's script:\n#  http://www.entropy.ch/blog/Developer/2008/09/22/Sparkle-Appcast-Automation-in-Xcode.html\n\nset -o errexit\n\n[ $CONFIGURATION = Release ] || { echo Distribution target requires \"'Release'\" configuration; env; false; }\n\nVERSION=$(defaults read \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.app/Contents/Info\" CFBundleShortVersionString)\nDOWNLOAD_BASE_URL=\"http://aaron.madlon-kay.com/software/pdftotextx\"\nRELEASENOTES_URL=\"http://aaron.madlon-kay.com/software/pdftotextx/release-notes.html#version-$VERSION\"\n\nARCHIVE_FILENAME=\"$PROJECT_NAME $VERSION.zip\"\nDOWNLOAD_URL=\"$DOWNLOAD_BASE_URL/$ARCHIVE_FILENAME\"\nKEYCHAIN_PRIVKEY_NAME=\"Sparkle Private Key 1\"\n\nWD=$PWD\ncd \"$BUILT_PRODUCTS_DIR\"\nrm -f \"$PROJECT_NAME\"*.zip\nditto -ck --keepParent \"$PROJECT_NAME.app\" \"$ARCHIVE_FILENAME\"\n\nSIZE=$(stat -f %z \"$ARCHIVE_FILENAME\")\nPUBDATE=$(LC_TIME=en_US date +\"%a, %d %b %G %T %z\")\nSIGNATURE=$(\nopenssl dgst -sha1 -binary < \"$ARCHIVE_FILENAME\" \\\n| openssl dgst -dss1 -sign <(security find-generic-password -g -s \"$KEYCHAIN_PRIVKEY_NAME\" 2>&1 1>/dev/null | perl -pe '($_) = /\"(.+)\"/; s/\\\\012/\\n/g') \\\n| openssl enc -base64\n)\n\n[ $SIGNATURE ] || { echo Unable to load signing private key with name \"'$KEYCHAIN_PRIVKEY_NAME'\" from keychain; false; }\n\ncat <<EOF\n<item>\n<title>Version $VERSION</title>\n<sparkle:releaseNotesLink>$RELEASENOTES_URL</sparkle:releaseNotesLink>\n<pubDate>$PUBDATE</pubDate>\n<enclosure\nurl=\"$DOWNLOAD_URL\"\nsparkle:version=\"$VERSION\"\ntype=\"application/octet-stream\"\nlength=\"$SIZE\"\nsparkle:dsaSignature=\"$SIGNATURE\"\n/>\n</item>\nEOF\n\n#echo scp \"'$HOME/svn/my-cool-app/build/Release/$ARCHIVE_FILENAME'\" www.example.com:download/\n#echo scp \"'$WD/appcast.xml'\" www.example.com:web/software/my-cool-app/appcast.xml\n\ncp \"$ARCHIVE_FILENAME\" \"$HOME/sites/madlon-kay.com/aaron/software/pdftotextx/\"\ncp \"$ARCHIVE_FILENAME\" \"$HOME/sites/madlon-kay.com/aaron/software/pdftotextx/$PROJECT_NAME.zip\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -424,6 +432,10 @@
 				GCC_PREFIX_HEADER = "PDFtoText X_Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "PDFtoText X";
 			};
 			name = Debug;
@@ -442,6 +454,10 @@
 				GCC_PREFIX_HEADER = "PDFtoText X_Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "PDFtoText X";
 			};
 			name = Release;
