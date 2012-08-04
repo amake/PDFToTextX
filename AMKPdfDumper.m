@@ -102,15 +102,15 @@
 	NSInteger endPage = [defaults integerForKey:AMKEndPageKey];
 			
 	if ((startPage > 0 && endPage > 0) && endPage >= startPage) {
-		if (AMKDebug) NSLog(@"Valid page range given: %ld to %ld", startPage, endPage);
+		if (AMKDebug) NSLog(@"Valid page range given: %lu to %lu", startPage, endPage);
 		PDFDocument *pdfDoc;
 		pdfDoc = [[[PDFDocument alloc] initWithURL:[self inputFile]] autorelease];
 		if (endPage <= [pdfDoc pageCount]) {
 			if (AMKDebug) NSLog(@"PDF contains %lu pages", [pdfDoc pageCount]);
 			[args addObject:@"-f"];
-			[args addObject:[NSString stringWithFormat:@"%d", startPage]];
+			[args addObject:[NSString stringWithFormat:@"%lu", startPage]];
 			[args addObject:@"-l"];
-			[args addObject:[NSString stringWithFormat:@"%d", endPage]];
+			[args addObject:[NSString stringWithFormat:@"%lu", endPage]];
 		}
 	}
 	
