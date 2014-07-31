@@ -12,52 +12,10 @@
 
 @implementation AMKPdfDumper
 
-@synthesize inputFile, outputFile, errorMessage;
+@synthesize errorMessage;
 
-- (id)init {
-	
-	if (self = [super init]) {
-		
-		// Use mktemp to create a safe temp file
-		NSString *td = NSTemporaryDirectory();
-		NSString *suffix = @".txt";
-		NSString *templateString = [NSString stringWithFormat:@"%@%@%@", td ? td : @"/tmp/",
-									@"pdftotextx.XXXXXX", suffix];
-		CFStringRef templateStringRef = (__bridge CFStringRef)templateString;
-		BOOL success = NO;
-		int fd = -1;
-		
-		// Create an NSData to hold the template
-		// See: http://www.cocoadev.com/index.pl?UniqueFileName
-		unsigned templateDataLength = (unsigned)CFStringGetMaximumSizeOfFileSystemRepresentation(templateStringRef);
-		NSMutableData *templateData = [NSMutableData dataWithLength:templateDataLength];
-		char *template = (char*)[templateData mutableBytes];
-		if (templateData != nil)
-		{
-			// Fetch the template into the buffer
-			if ([templateString getFileSystemRepresentation:template maxLength:templateDataLength])
-			{
-				// Create the file. This modifies the template (XXXXXX is replaced by a random string)
-				fd = mkstemps(template, (int)[suffix length]);
-				if (close(fd) == 0) {
-					success = YES;
-				}
-			}
-		}
-		
-		if (!success && template != nil)
-			unlink(template);
-		if (fd >= 0)
-			close(fd);
-        
-		NSString *path = [[NSString alloc] initWithData:templateData encoding:NSUTF8StringEncoding];
-		[self setOutputFile:[NSURL fileURLWithPath:path]];
-	}
-	
-	return self;
-}
 
-- (void)dumpPdfToText {
+- (NSString*)dumpPdfToText: (NSURL*)input {
 	
 	if (AMKDebug) NSLog(@"Starting PDF dump");
 	
@@ -104,7 +62,7 @@
 	if ((startPage > 0 && endPage > 0) && endPage >= startPage) {
 		if (AMKDebug) NSLog(@"Valid page range given: %lu to %lu", startPage, endPage);
 		PDFDocument *pdfDoc;
-		pdfDoc = [[PDFDocument alloc] initWithURL:[self inputFile]];
+		pdfDoc = [[PDFDocument alloc] initWithURL:inputFile];
 		if (endPage <= [pdfDoc pageCount]) {
 			if (AMKDebug) NSLog(@"PDF contains %lu pages", [pdfDoc pageCount]);
 			[args addObject:@"-f"];
@@ -145,31 +103,10 @@
 	
 	// Indicate input file
 	if (AMKDebug) NSLog(@"Setting input file");
-	[args addObject:[[self inputFile] path]];
-	
-	// Indicate output file
-	if (AMKDebug) NSLog(@"Setting output file");
-	// User-defined output folder
-	NSURL *outputFolder = [NSURL fileURLWithPath:[[defaults objectForKey:AMKOutputFolderKey] stringByExpandingTildeInPath]];
-	
-	if ([defaults boolForKey:AMKAutoSaveKey] && ![defaults boolForKey:AMKOutputToPDFFolderKey]
-		&& outputFolder) {
-		// Save in user-specified folder
-		
-		// Get original filename
-		NSString *filename = [[[self inputFile] lastPathComponent] stringByDeletingPathExtension];
-		// Put original filename in output folder, add .txt
-		[self setOutputFile:[[outputFolder URLByAppendingPathComponent:filename]
-							 URLByAppendingPathExtension:@"txt"]];
-		[args addObject:[[self outputFile] path]];
-	} else if ([defaults boolForKey:AMKAutoSaveKey] && [defaults boolForKey:AMKOutputToPDFFolderKey])  {
-		// Save in same folder as input PDF (pdftotext default behavior).  No output path needed.
-		[self setOutputFile:[[[self inputFile] URLByDeletingPathExtension]
-							 URLByAppendingPathExtension:@"txt"]];
-	} else {
-		// Save to temp folder
-		[args addObject:[[self outputFile] path]];
-	}
+	[args addObject:[input path]];
+    
+    // Output to stdout
+    [args addObject:@"-"];
 	
 	NSTask *theTask = [[NSTask alloc] init];
 	
@@ -196,29 +133,23 @@
 
 	if (AMKDebug) NSLog(@"Ready to launch task %@ with args: %@", [theTask launchPath], [theTask arguments]);
 	[theTask launch];
+    NSData *outputData = [[standardPipe fileHandleForReading] readDataToEndOfFile];
 	[theTask waitUntilExit];
 		
 	if (AMKDebug && ![theTask isRunning]) NSLog(@"Task ended with code: %d", [theTask terminationStatus]);
 	
-	// Read standard output and log it
-	NSData *outputData = [[standardPipe fileHandleForReading] availableData];
-	if (AMKDebug) NSLog(@"Task output: %@", [[NSString alloc] initWithData:outputData
-																   encoding:NSUTF8StringEncoding]);
-	
 	// Read standard error and save it
 	NSData *errorData = [[errorPipe fileHandleForReading] availableData];
-	NSString *error;
 	if ((errorData != nil) && [errorData length]) {
 		if (AMKDebug) NSLog(@"Task reported an error.");
-		error = [[NSString alloc] initWithData:errorData encoding:NSUTF8StringEncoding];
-		[self setErrorMessage:error];
+		[self setErrorMessage:[[NSString alloc] initWithData:errorData encoding:NSUTF8StringEncoding]];
 	} else {
 		if (AMKDebug) NSLog(@"Task reported no errors.");
 		NSString *message = NSLocalizedString(@"doneStatus", @"Done");
 		[self setErrorMessage:message];
 	}
 	
-	
+	return [[NSString alloc] initWithData:outputData encoding:NSUTF8StringEncoding];
 }
 
 @end

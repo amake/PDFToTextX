@@ -258,35 +258,45 @@
 - (IBAction)processFile:(id)sender {
 	
 	// Don't proceed if input file is not set yet
-	if (![self inputFileURL]) {
+	if (!inputFileURL) {
 		if (AMKDebug) NSLog(@"No file to process");
 		return;
 	}
 	
 	// Initialize and execute the PDF dumping object
 	AMKPdfDumper *dumper = [[AMKPdfDumper alloc] init];
-	[dumper setInputFile:[self inputFileURL]];
 	
 	[progressIndicator startAnimation:nil];
 	NSString *status = NSLocalizedString(@"processingStatus", @"Processing...");
 	[statusMessageField setStringValue:status];
-	[dumper dumpPdfToText];
-	[progressIndicator stopAnimation:nil];
+	NSString *outputText = [dumper dumpPdfToText:inputFileURL];
 	
-	[self setOutputFileURL:[dumper outputFile]];
+    // Indicate output file
+	if (AMKDebug) NSLog(@"Setting output file");
 	
-	// Load content of output file.  Guesses encoding automatically.
-	NSString *outputText = [NSString stringWithContentsOfURL:[self outputFileURL]
-												 usedEncoding:NULL
-														error:NULL];
-	if (outputText) {
-		[textOutputPreview setString:outputText];
-	} else {
-		[textOutputPreview setString:@""];
+    // User-defined output folder
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	if ([defaults boolForKey:AMKAutoSaveKey]) {
+        NSString *outputPath = [defaults objectForKey:AMKOutputFolderKey];
+        if (![defaults boolForKey:AMKOutputToPDFFolderKey] && outputPath) {
+            // Save in user-specified folder
+            NSURL *outputFolder = [NSURL fileURLWithPath:[outputPath stringByExpandingTildeInPath]];
+            // Get original filename
+            NSString *filename = [[inputFileURL lastPathComponent] stringByDeletingPathExtension];
+            // Put original filename in output folder, add .txt
+            outputFileURL = [[outputFolder URLByAppendingPathComponent:filename]
+                             URLByAppendingPathExtension:@"txt"];
+        } else if ([defaults boolForKey:AMKOutputToPDFFolderKey])  {
+            // Save in same folder as input PDF (pdftotext default behavior).  No output path needed.
+            outputFileURL = [[inputFileURL URLByDeletingPathExtension]
+                             URLByAppendingPathExtension:@"txt"];
+        }
+        [outputText writeToURL:outputFileURL atomically:true encoding:NSUTF8StringEncoding error:nil];
 	}
 	
-	// Can't use readRTFDFromFile because it chokes on UTF-8 text.
-	//	[textOutputPreview readRTFDFromFile:[dumper outputFile]];
+    [textOutputPreview setString:outputText ? outputText : @""];
+    
+    [progressIndicator stopAnimation:nil];
 	
 	[statusMessageField setStringValue:[dumper errorMessage]];
 	

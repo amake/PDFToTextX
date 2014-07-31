@@ -14,9 +14,8 @@
     NSString *errorMessage;
 }
 
-@property(readwrite,copy) NSURL *inputFile, *outputFile;
 @property(readwrite,copy) NSString *errorMessage;
 
-- (void)dumpPdfToText;
+- (NSString*)dumpPdfToText: (NSURL*)input;
 
 @end
