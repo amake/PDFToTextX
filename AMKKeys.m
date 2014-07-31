@@ -10,7 +10,6 @@
 
 BOOL AMKDebug = TRUE;
 
-NSString *AMKEncodingKey = @"OutputEncoding";
 NSString *AMKLineEndingsKey = @"LineEndings";
 NSString *AMKLayoutKey = @"MimicLayout";
 NSString *AMKStartPageKey = @"StartPage";

@@ -10,7 +10,6 @@
 
 extern BOOL AMKDebug;
 
-extern NSString *AMKEncodingKey;
 extern NSString *AMKLineEndingsKey;
 extern NSString *AMKLayoutKey;
 extern NSString *AMKStartPageKey;

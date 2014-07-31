@@ -36,7 +36,7 @@
 	// Set encoding
 	if (AMKDebug) NSLog(@"Setting encoding");
 	[args addObject:@"-enc"];
-	[args addObject:[defaults stringForKey:AMKEncodingKey]];
+	[args addObject:@"UTF-8"];
 	
 	// Set line endings
 	if (AMKDebug) NSLog(@"Setting line endings");

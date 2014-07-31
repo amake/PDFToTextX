@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>OutputEncoding</key>
-	<string>UTF-8</string>
 	<key>LineEndings</key>
 	<string>unix</string>
 	<key>MimicLayout</key>
