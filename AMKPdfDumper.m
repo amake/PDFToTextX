@@ -23,7 +23,7 @@
 		NSString *suffix = @".txt";
 		NSString *templateString = [NSString stringWithFormat:@"%@%@%@", td ? td : @"/tmp/",
 									@"pdftotextx.XXXXXX", suffix];
-		CFStringRef templateStringRef = (CFStringRef)templateString;
+		CFStringRef templateStringRef = (__bridge CFStringRef)templateString;
 		BOOL success = NO;
 		int fd = -1;
 		
@@ -104,7 +104,7 @@
 	if ((startPage > 0 && endPage > 0) && endPage >= startPage) {
 		if (AMKDebug) NSLog(@"Valid page range given: %lu to %lu", startPage, endPage);
 		PDFDocument *pdfDoc;
-		pdfDoc = [[[PDFDocument alloc] initWithURL:[self inputFile]] autorelease];
+		pdfDoc = [[PDFDocument alloc] initWithURL:[self inputFile]];
 		if (endPage <= [pdfDoc pageCount]) {
 			if (AMKDebug) NSLog(@"PDF contains %lu pages", [pdfDoc pageCount]);
 			[args addObject:@"-f"];
@@ -171,11 +171,11 @@
 		[args addObject:[[self outputFile] path]];
 	}
 	
-	NSTask *theTask = [[[NSTask alloc] init] autorelease];
+	NSTask *theTask = [[NSTask alloc] init];
 	
 	// At some point pdftotext started reporting an error if the
 	// PAPERSIZE environment variable was not set. Default to A4.
-	[theTask setEnvironment:[[NSDictionary dictionaryWithObject:@"A4" forKey:@"PAPERSIZE"] autorelease]];
+	[theTask setEnvironment:[NSDictionary dictionaryWithObject:@"A4" forKey:@"PAPERSIZE"]];
 	
 	if (AMKDebug) NSLog(@"Setting current path to: %@", [[NSBundle mainBundle] resourcePath]);
 	[theTask setCurrentDirectoryPath:[[NSBundle mainBundle] resourcePath]];
@@ -202,15 +202,15 @@
 	
 	// Read standard output and log it
 	NSData *outputData = [[standardPipe fileHandleForReading] availableData];
-	if (AMKDebug) NSLog(@"Task output: %@", [[[NSString alloc] initWithData:outputData
-																   encoding:NSUTF8StringEncoding] autorelease]);
+	if (AMKDebug) NSLog(@"Task output: %@", [[NSString alloc] initWithData:outputData
+																   encoding:NSUTF8StringEncoding]);
 	
 	// Read standard error and save it
 	NSData *errorData = [[errorPipe fileHandleForReading] availableData];
 	NSString *error;
 	if ((errorData != nil) && [errorData length]) {
 		if (AMKDebug) NSLog(@"Task reported an error.");
-		error = [[[NSString alloc] initWithData:errorData encoding:NSUTF8StringEncoding] autorelease];
+		error = [[NSString alloc] initWithData:errorData encoding:NSUTF8StringEncoding];
 		[self setErrorMessage:error];
 	} else {
 		if (AMKDebug) NSLog(@"Task reported no errors.");

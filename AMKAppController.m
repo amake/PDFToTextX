@@ -53,8 +53,7 @@
 	[[NSUserDefaultsController sharedUserDefaultsController] setInitialValues:dict];
 	
 	// Register value transformer
-	AMKPathToIconTransformer *transformer = [[[AMKPathToIconTransformer alloc] init]
-											 autorelease];
+	AMKPathToIconTransformer *transformer = [[AMKPathToIconTransformer alloc] init];
 	[NSValueTransformer setValueTransformer:transformer
 									forName:@"AMKPathToIconTransformer"];
 	
@@ -87,9 +86,8 @@
 	
 	// Load default PDF and text
 	PDFDocument *pdfDoc;
-	pdfDoc = [[[PDFDocument alloc] initWithURL:[[NSBundle mainBundle] URLForResource:@"defaultPdf"
-																	   withExtension:@"pdf"]]
-			  autorelease];
+	pdfDoc = [[PDFDocument alloc] initWithURL:[[NSBundle mainBundle] URLForResource:@"defaultPdf"
+																	   withExtension:@"pdf"]];
 	[pdfViewPane setDocument:pdfDoc];
 	[textOutputPreview setString:NSLocalizedString(@"defaultTextPreview", @"...the output will be displayed here.")];
 }
@@ -292,7 +290,6 @@
 	
 	[statusMessageField setStringValue:[dumper errorMessage]];
 	
-	[dumper release];
 }
 
 
@@ -421,8 +418,7 @@
 		
 		// Display PDF in window
 		PDFDocument *pdfDoc;
-		pdfDoc = [[[PDFDocument alloc] initWithURL:[self inputFileURL]]
-				  autorelease];
+		pdfDoc = [[PDFDocument alloc] initWithURL:[self inputFileURL]];
 		
 		// If PDF is locked, use user-specified password to unlock it.
 		NSString *password = [[NSUserDefaults standardUserDefaults] stringForKey:AMKPasswordKey];
