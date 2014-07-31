@@ -1,0 +1,534 @@
+
+/* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "5"; */
+"5.title" = "Bring All to Front";
+
+/* Class = "NSMenuItem"; title = "Window"; ObjectID = "19"; */
+"19.title" = "Window";
+
+/* Class = "NSMenuItem"; title = "Minimize"; ObjectID = "23"; */
+"23.title" = "Minimize";
+
+/* Class = "NSMenu"; title = "Window"; ObjectID = "24"; */
+"24.title" = "Window";
+
+/* Class = "NSMenu"; title = "AMainMenu"; ObjectID = "29"; */
+"29.title" = "AMainMenu";
+
+/* Class = "NSMenuItem"; title = "PDFtoText X"; ObjectID = "56"; */
+"56.title" = "PDFtoText X";
+
+/* Class = "NSMenu"; title = "PDFtoText X"; ObjectID = "57"; */
+"57.title" = "PDFtoText X";
+
+/* Class = "NSMenuItem"; title = "About PDFtoText X"; ObjectID = "58"; */
+"58.title" = "About PDFtoText X";
+
+/* Class = "NSMenuItem"; title = "Open..."; ObjectID = "72"; */
+"72.title" = "Open...";
+
+/* Class = "NSMenuItem"; title = "Close"; ObjectID = "73"; */
+"73.title" = "Close";
+
+/* Class = "NSMenuItem"; title = "Save"; ObjectID = "75"; */
+"75.title" = "Save";
+
+/* Class = "NSMenuItem"; title = "Page Setup..."; ObjectID = "77"; */
+"77.title" = "Page Setup...";
+
+/* Class = "NSMenuItem"; title = "Print..."; ObjectID = "78"; */
+"78.title" = "Print...";
+
+/* Class = "NSMenu"; title = "File"; ObjectID = "81"; */
+"81.title" = "File";
+
+/* Class = "NSMenuItem"; title = "File"; ObjectID = "83"; */
+"83.title" = "File";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "103"; */
+"103.title" = "Help";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "106"; */
+"106.title" = "Help";
+
+/* Class = "NSMenuItem"; title = "PDFtoText X Help"; ObjectID = "111"; */
+"111.title" = "PDFtoText X Help";
+
+/* Class = "NSMenuItem"; title = "Preferences..."; ObjectID = "129"; */
+"129.title" = "Preferences...";
+
+/* Class = "NSMenu"; title = "Services"; ObjectID = "130"; */
+"130.title" = "Services";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "131"; */
+"131.title" = "Services";
+
+/* Class = "NSMenuItem"; title = "Hide PDFtoText X"; ObjectID = "134"; */
+"134.title" = "Hide PDFtoText X";
+
+/* Class = "NSMenuItem"; title = "Quit PDFtoText X"; ObjectID = "136"; */
+"136.title" = "Quit PDFtoText X";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "145"; */
+"145.title" = "Hide Others";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "150"; */
+"150.title" = "Show All";
+
+/* Class = "NSMenuItem"; title = "Stop Speaking"; ObjectID = "195"; */
+"195.title" = "Stop Speaking";
+
+/* Class = "NSMenuItem"; title = "Start Speaking"; ObjectID = "196"; */
+"196.title" = "Start Speaking";
+
+/* Class = "NSMenuItem"; title = "Copy"; ObjectID = "197"; */
+"197.title" = "Copy";
+
+/* Class = "NSMenuItem"; title = "Select All"; ObjectID = "198"; */
+"198.title" = "Select All";
+
+/* Class = "NSMenuItem"; title = "Cut"; ObjectID = "199"; */
+"199.title" = "Cut";
+
+/* Class = "NSMenu"; title = "Spelling and Grammar"; ObjectID = "200"; */
+"200.title" = "Spelling and Grammar";
+
+/* Class = "NSMenuItem"; title = "Check Spelling"; ObjectID = "201"; */
+"201.title" = "Check Spelling";
+
+/* Class = "NSMenuItem"; title = "Delete"; ObjectID = "202"; */
+"202.title" = "Delete";
+
+/* Class = "NSMenuItem"; title = "Paste"; ObjectID = "203"; */
+"203.title" = "Paste";
+
+/* Class = "NSMenuItem"; title = "Show Spelling..."; ObjectID = "204"; */
+"204.title" = "Show Spelling...";
+
+/* Class = "NSMenu"; title = "Edit"; ObjectID = "205"; */
+"205.title" = "Edit";
+
+/* Class = "NSMenuItem"; title = "Undo"; ObjectID = "207"; */
+"207.title" = "Undo";
+
+/* Class = "NSMenuItem"; title = "Find Next"; ObjectID = "208"; */
+"208.title" = "Find Next";
+
+/* Class = "NSMenuItem"; title = "Find..."; ObjectID = "209"; */
+"209.title" = "Find...";
+
+/* Class = "NSMenuItem"; title = "Jump to Selection"; ObjectID = "210"; */
+"210.title" = "Jump to Selection";
+
+/* Class = "NSMenuItem"; title = "Speech"; ObjectID = "211"; */
+"211.title" = "Speech";
+
+/* Class = "NSMenu"; title = "Speech"; ObjectID = "212"; */
+"212.title" = "Speech";
+
+/* Class = "NSMenuItem"; title = "Find Previous"; ObjectID = "213"; */
+"213.title" = "Find Previous";
+
+/* Class = "NSMenuItem"; title = "Redo"; ObjectID = "215"; */
+"215.title" = "Redo";
+
+/* Class = "NSMenuItem"; title = "Spelling and Grammar"; ObjectID = "216"; */
+"216.title" = "Spelling and Grammar";
+
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "217"; */
+"217.title" = "Edit";
+
+/* Class = "NSMenuItem"; title = "Find"; ObjectID = "218"; */
+"218.title" = "Find";
+
+/* Class = "NSMenuItem"; title = "Check Spelling While Typing"; ObjectID = "219"; */
+"219.title" = "Check Spelling While Typing";
+
+/* Class = "NSMenu"; title = "Find"; ObjectID = "220"; */
+"220.title" = "Find";
+
+/* Class = "NSMenuItem"; title = "Use Selection for Find"; ObjectID = "221"; */
+"221.title" = "Use Selection for Find";
+
+/* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "239"; */
+"239.title" = "Zoom";
+
+/* Class = "NSMenuItem"; title = "Check Grammar With Spelling"; ObjectID = "346"; */
+"346.title" = "Check Grammar With Spelling";
+
+/* Class = "NSMenuItem"; title = "Substitutions"; ObjectID = "348"; */
+"348.title" = "Substitutions";
+
+/* Class = "NSMenu"; title = "Substitutions"; ObjectID = "349"; */
+"349.title" = "Substitutions";
+
+/* Class = "NSMenuItem"; title = "Smart Copy/Paste"; ObjectID = "350"; */
+"350.title" = "Smart Copy/Paste";
+
+/* Class = "NSMenuItem"; title = "Smart Quotes"; ObjectID = "351"; */
+"351.title" = "Smart Quotes";
+
+/* Class = "NSMenuItem"; title = "Smart Links"; ObjectID = "354"; */
+"354.title" = "Smart Links";
+
+/* Class = "AMKDragWindow"; title = "PDFtoText X"; ObjectID = "371"; */
+"371.title" = "PDFtoText X";
+
+/* Class = "NSMenuItem"; title = "Format"; ObjectID = "375"; */
+"375.title" = "Format";
+
+/* Class = "NSMenu"; title = "Format"; ObjectID = "376"; */
+"376.title" = "Format";
+
+/* Class = "NSMenuItem"; title = "Font"; ObjectID = "377"; */
+"377.title" = "Font";
+
+/* Class = "NSMenuItem"; title = "Text"; ObjectID = "378"; */
+"378.title" = "Text";
+
+/* Class = "NSMenu"; title = "Text"; ObjectID = "379"; */
+"379.title" = "Text";
+
+/* Class = "NSMenuItem"; title = "Align Left"; ObjectID = "380"; */
+"380.title" = "Align Left";
+
+/* Class = "NSMenuItem"; title = "Center"; ObjectID = "381"; */
+"381.title" = "Center";
+
+/* Class = "NSMenuItem"; title = "Justify"; ObjectID = "382"; */
+"382.title" = "Justify";
+
+/* Class = "NSMenuItem"; title = "Align Right"; ObjectID = "383"; */
+"383.title" = "Align Right";
+
+/* Class = "NSMenuItem"; title = "Show Ruler"; ObjectID = "385"; */
+"385.title" = "Show Ruler";
+
+/* Class = "NSMenuItem"; title = "Copy Ruler"; ObjectID = "386"; */
+"386.title" = "Copy Ruler";
+
+/* Class = "NSMenuItem"; title = "Paste Ruler"; ObjectID = "387"; */
+"387.title" = "Paste Ruler";
+
+/* Class = "NSMenu"; title = "Font"; ObjectID = "388"; */
+"388.title" = "Font";
+
+/* Class = "NSMenuItem"; title = "Show Fonts"; ObjectID = "389"; */
+"389.title" = "Show Fonts";
+
+/* Class = "NSMenuItem"; title = "Bold"; ObjectID = "390"; */
+"390.title" = "Bold";
+
+/* Class = "NSMenuItem"; title = "Italic"; ObjectID = "391"; */
+"391.title" = "Italic";
+
+/* Class = "NSMenuItem"; title = "Underline"; ObjectID = "392"; */
+"392.title" = "Underline";
+
+/* Class = "NSMenuItem"; title = "Bigger"; ObjectID = "394"; */
+"394.title" = "Bigger";
+
+/* Class = "NSMenuItem"; title = "Smaller"; ObjectID = "395"; */
+"395.title" = "Smaller";
+
+/* Class = "NSMenuItem"; title = "Kern"; ObjectID = "397"; */
+"397.title" = "Kern";
+
+/* Class = "NSMenuItem"; title = "Ligature"; ObjectID = "398"; */
+"398.title" = "Ligature";
+
+/* Class = "NSMenuItem"; title = "Baseline"; ObjectID = "399"; */
+"399.title" = "Baseline";
+
+/* Class = "NSMenuItem"; title = "Show Colors"; ObjectID = "401"; */
+"401.title" = "Show Colors";
+
+/* Class = "NSMenuItem"; title = "Copy Style"; ObjectID = "403"; */
+"403.title" = "Copy Style";
+
+/* Class = "NSMenuItem"; title = "Paste Style"; ObjectID = "404"; */
+"404.title" = "Paste Style";
+
+/* Class = "NSMenu"; title = "Baseline"; ObjectID = "405"; */
+"405.title" = "Baseline";
+
+/* Class = "NSMenuItem"; title = "Use Default"; ObjectID = "406"; */
+"406.title" = "Use Default";
+
+/* Class = "NSMenuItem"; title = "Superscript"; ObjectID = "407"; */
+"407.title" = "Superscript";
+
+/* Class = "NSMenuItem"; title = "Subscript"; ObjectID = "408"; */
+"408.title" = "Subscript";
+
+/* Class = "NSMenuItem"; title = "Raise"; ObjectID = "409"; */
+"409.title" = "Raise";
+
+/* Class = "NSMenuItem"; title = "Lower"; ObjectID = "410"; */
+"410.title" = "Lower";
+
+/* Class = "NSMenu"; title = "Ligature"; ObjectID = "411"; */
+"411.title" = "Ligature";
+
+/* Class = "NSMenuItem"; title = "Use Default"; ObjectID = "412"; */
+"412.title" = "Use Default";
+
+/* Class = "NSMenuItem"; title = "Use None"; ObjectID = "413"; */
+"413.title" = "Use None";
+
+/* Class = "NSMenuItem"; title = "Use All"; ObjectID = "414"; */
+"414.title" = "Use All";
+
+/* Class = "NSMenu"; title = "Kern"; ObjectID = "415"; */
+"415.title" = "Kern";
+
+/* Class = "NSMenuItem"; title = "Use Default"; ObjectID = "416"; */
+"416.title" = "Use Default";
+
+/* Class = "NSMenuItem"; title = "Use None"; ObjectID = "417"; */
+"417.title" = "Use None";
+
+/* Class = "NSMenuItem"; title = "Tighten"; ObjectID = "418"; */
+"418.title" = "Tighten";
+
+/* Class = "NSMenuItem"; title = "Loosen"; ObjectID = "419"; */
+"419.title" = "Loosen";
+
+/* Class = "NSButtonCell"; title = "Select a file..."; ObjectID = "461"; */
+"461.title" = "Select a file...";
+
+/* Class = "NSButtonCell"; title = "Copy"; ObjectID = "554"; */
+"554.title" = "Copy";
+
+/* Class = "NSButtonCell"; title = "Save..."; ObjectID = "556"; */
+"556.title" = "Save...";
+
+/* Class = "NSBox"; title = "Advanced"; ObjectID = "559"; */
+"559.title" = "Advanced";
+
+/* Class = "NSButton"; ibShadowedToolTip = "-layout\n\nMaintain (as best as possible) the original physical layout of the text. The default is to 'undo' physical layout (columns, hyphenation, etc.) and output the text in reading order."; ObjectID = "561"; */
+"561.ibShadowedToolTip" = "-layout\n\nMaintain (as best as possible) the original physical layout of the text. The default is to 'undo' physical layout (columns, hyphenation, etc.) and output the text in reading order.";
+
+/* Class = "NSPopUpButton"; ibShadowedToolTip = "-eol\n\nSets the end-of-line convention to use for text output.  (Default: unix)"; ObjectID = "562"; */
+"562.ibShadowedToolTip" = "-eol\n\nSets the end-of-line convention to use for text output.  (Default: unix)";
+
+/* Class = "NSPopUpButton"; ibShadowedToolTip = "-enc\n\nSets the encoding to use for text output.  (Default: UTF-8)"; ObjectID = "564"; */
+"564.ibShadowedToolTip" = "-enc\n\nSets the encoding to use for text output.  (Default: UTF-8)";
+
+/* Class = "NSTextFieldCell"; title = "Encoding:"; ObjectID = "566"; */
+"566.title" = "Encoding:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "568"; */
+"568.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "ISO-8859-9"; ObjectID = "573"; */
+"573.title" = "ISO-8859-9";
+
+/* Class = "NSMenuItem"; title = "TIS-620"; ObjectID = "578"; */
+"578.title" = "TIS-620";
+
+/* Class = "NSMenuItem"; title = "Windows-1255"; ObjectID = "579"; */
+"579.title" = "Windows-1255";
+
+/* Class = "NSMenuItem"; title = "ISO-8859-8"; ObjectID = "580"; */
+"580.title" = "ISO-8859-8";
+
+/* Class = "NSMenuItem"; title = "ISO-8859-6"; ObjectID = "581"; */
+"581.title" = "ISO-8859-6";
+
+/* Class = "NSMenuItem"; title = "ISO-2022-KR"; ObjectID = "582"; */
+"582.title" = "ISO-2022-KR";
+
+/* Class = "NSMenuItem"; title = "GBK"; ObjectID = "583"; */
+"583.title" = "GBK";
+
+/* Class = "NSMenuItem"; title = "EUC-CN"; ObjectID = "584"; */
+"584.title" = "EUC-CN";
+
+/* Class = "NSMenuItem"; title = "ISO-2022-CN"; ObjectID = "585"; */
+"585.title" = "ISO-2022-CN";
+
+/* Class = "NSMenuItem"; title = "Big5ascii"; ObjectID = "586"; */
+"586.title" = "Big5ascii";
+
+/* Class = "NSMenuItem"; title = "Big5"; ObjectID = "587"; */
+"587.title" = "Big5";
+
+/* Class = "NSMenuItem"; title = "Latin2"; ObjectID = "588"; */
+"588.title" = "Latin2";
+
+/* Class = "NSMenuItem"; title = "KOI8-R"; ObjectID = "589"; */
+"589.title" = "KOI8-R";
+
+/* Class = "NSMenuItem"; title = "ISO-8859-7"; ObjectID = "591"; */
+"591.title" = "ISO-8859-7";
+
+/* Class = "NSMenuItem"; title = "Greek"; ObjectID = "592"; */
+"592.title" = "Greek";
+
+/* Class = "NSMenuItem"; title = "Japanese"; ObjectID = "593"; */
+"593.title" = "Japanese";
+
+/* Class = "NSMenuItem"; title = "Shift-JIS"; ObjectID = "594"; */
+"594.title" = "Shift-JIS";
+
+/* Class = "NSMenuItem"; title = "EUC-JP"; ObjectID = "595"; */
+"595.title" = "EUC-JP";
+
+/* Class = "NSMenuItem"; title = "ISO-2022-JP"; ObjectID = "596"; */
+"596.title" = "ISO-2022-JP";
+
+/* Class = "NSMenuItem"; title = "Latin1"; ObjectID = "597"; */
+"597.title" = "Latin1";
+
+/* Class = "NSMenuItem"; title = "UTF-8"; ObjectID = "598"; */
+"598.title" = "UTF-8";
+
+/* Class = "NSTextFieldCell"; title = "Line endings:"; ObjectID = "599"; */
+"599.title" = "Line endings:";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "601"; */
+"601.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "mac"; ObjectID = "602"; */
+"602.title" = "mac";
+
+/* Class = "NSMenuItem"; title = "dos"; ObjectID = "603"; */
+"603.title" = "dos";
+
+/* Class = "NSMenuItem"; title = "unix"; ObjectID = "604"; */
+"604.title" = "unix";
+
+/* Class = "NSButtonCell"; title = "Mimic original layout"; ObjectID = "605"; */
+"605.title" = "Mimic original layout";
+
+/* Class = "NSTextField"; ibShadowedToolTip = "-f\n\nSpecifies the first page to convert."; ObjectID = "625"; */
+"625.ibShadowedToolTip" = "-f\n\nSpecifies the first page to convert.";
+
+/* Class = "NSTextField"; ibShadowedToolTip = "-l\n\nSpecifies the last page to convert."; ObjectID = "627"; */
+"627.ibShadowedToolTip" = "-l\n\nSpecifies the last page to convert.";
+
+/* Class = "NSTextFieldCell"; title = "Pages:"; ObjectID = "630"; */
+"630.title" = "Pages:";
+
+/* Class = "NSTextFieldCell"; title = "to"; ObjectID = "632"; */
+"632.title" = "to";
+
+/* Class = "NSButton"; ibShadowedToolTip = "-nopgbrk (when unchecked)\n\nDon't insert page breaks (form feed characters) between pages."; ObjectID = "638"; */
+"638.ibShadowedToolTip" = "-nopgbrk (when unchecked)\n\nDon't insert page breaks (form feed characters) between pages.";
+
+/* Class = "NSButtonCell"; title = "Insert pagebreaks"; ObjectID = "639"; */
+"639.title" = "Insert pagebreaks";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Returns the \"Advanced\" settings to their default values."; ObjectID = "640"; */
+"640.ibShadowedToolTip" = "Returns the \"Advanced\" settings to their default values.";
+
+/* Class = "NSButtonCell"; title = "Reset all"; ObjectID = "641"; */
+"641.title" = "Reset all";
+
+/* Class = "NSButtonCell"; title = "Go"; ObjectID = "655"; */
+"655.title" = "Go";
+
+/* Class = "NSButton"; ibShadowedToolTip = "When enabled, the right-hand text output preview will update automatically when \"Advanced\" settings are changed."; ObjectID = "656"; */
+"656.ibShadowedToolTip" = "When enabled, the right-hand text output preview will update automatically when \"Advanced\" settings are changed.";
+
+/* Class = "NSButtonCell"; title = "Refresh text preview automatically"; ObjectID = "657"; */
+"657.title" = "Refresh text preview automatically";
+
+/* Class = "NSButtonCell"; title = "Select..."; ObjectID = "677"; */
+"677.title" = "Select...";
+
+/* Class = "NSButton"; ibShadowedToolTip = "When enabled, the extracted text will be automatically saved in the folder specified below."; ObjectID = "678"; */
+"678.ibShadowedToolTip" = "When enabled, the extracted text will be automatically saved in the folder specified below.";
+
+/* Class = "NSButtonCell"; title = "Automatically save results in:"; ObjectID = "679"; */
+"679.title" = "Automatically save results in:";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Toggles the left-hand PDF preview display."; ObjectID = "728"; */
+"728.ibShadowedToolTip" = "Toggles the left-hand PDF preview display.";
+
+/* Class = "NSButtonCell"; title = "Display PDF"; ObjectID = "729"; */
+"729.title" = "Display PDF";
+
+/* Class = "NSWindow"; title = "Preferences"; ObjectID = "736"; */
+"736.title" = "Preferences";
+
+/* Class = "NSButtonCell"; title = "Use custom pdftotext binary"; ObjectID = "741"; */
+"741.title" = "Use custom pdftotext binary";
+
+/* Class = "NSTextFieldCell"; title = "Path:"; ObjectID = "743"; */
+"743.title" = "Path:";
+
+/* Class = "NSButtonCell"; title = "I donated"; ObjectID = "745"; */
+"745.title" = "I donated";
+
+/* Class = "NSMenuItem"; title = "License"; ObjectID = "774"; */
+"774.title" = "License";
+
+/* Class = "NSMenuItem"; title = "xpdf Documentation"; ObjectID = "791"; */
+"791.title" = "xpdf Documentation";
+
+/* Class = "NSMenu"; title = "xpdf Documentation"; ObjectID = "792"; */
+"792.title" = "xpdf Documentation";
+
+/* Class = "NSMenuItem"; title = "COPYING"; ObjectID = "793"; */
+"793.title" = "COPYING";
+
+/* Class = "NSMenuItem"; title = "README"; ObjectID = "794"; */
+"794.title" = "README";
+
+/* Class = "NSMenuItem"; title = "pdftotext man page"; ObjectID = "795"; */
+"795.title" = "pdftotext man page";
+
+/* Class = "NSMenuItem"; title = "Check for updates..."; ObjectID = "800"; */
+"800.title" = "Check for updates...";
+
+/* Class = "NSButton"; ibShadowedToolTip = "-raw\n\nKeep the text in content stream order.  This is a hack which often \"undoes\" column formatting, etc.  Use of raw mode is no longer recommended."; ObjectID = "811"; */
+"811.ibShadowedToolTip" = "-raw\n\nKeep the text in content stream order.  This is a hack which often \"undoes\" column formatting, etc.  Use of raw mode is no longer recommended.";
+
+/* Class = "NSButtonCell"; title = "Raw output"; ObjectID = "812"; */
+"812.title" = "Raw output";
+
+/* Class = "NSButtonCell"; ibShadowedToolTip = "-opw\n\nSpecify the owner password for the PDF file.  Providing this will bypass all security restrictions."; ObjectID = "818"; */
+"818.ibShadowedToolTip" = "-opw\n\nSpecify the owner password for the PDF file.  Providing this will bypass all security restrictions.";
+
+/* Class = "NSButtonCell"; title = "Owner"; ObjectID = "818"; */
+"818.title" = "Owner";
+
+/* Class = "NSButtonCell"; ibShadowedToolTip = "-upw\n\nSpecify the user password for the PDF file."; ObjectID = "819"; */
+"819.ibShadowedToolTip" = "-upw\n\nSpecify the user password for the PDF file.";
+
+/* Class = "NSButtonCell"; title = "User"; ObjectID = "819"; */
+"819.title" = "User";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "820"; */
+"820.title" = "Radio";
+
+/* Class = "NSButtonCell"; title = "Use password:"; ObjectID = "822"; */
+"822.title" = "Use password:";
+
+/* Class = "NSButtonCell"; title = "Automatically check for updates"; ObjectID = "869"; */
+"869.title" = "Automatically check for updates";
+
+/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "875"; */
+"875.title" = "OtherViews";
+
+/* Class = "NSMenuItem"; title = "Hourly"; ObjectID = "877"; */
+"877.title" = "Hourly";
+
+/* Class = "NSMenuItem"; title = "Weekly"; ObjectID = "878"; */
+"878.title" = "Weekly";
+
+/* Class = "NSMenuItem"; title = "Monthly"; ObjectID = "879"; */
+"879.title" = "Monthly";
+
+/* Class = "NSButtonCell"; title = "Same folder as original PDF"; ObjectID = "887"; */
+"887.title" = "Same folder as original PDF";
+
+/* Class = "NSButtonCell"; title = "Other:"; ObjectID = "888"; */
+"888.title" = "Other:";
+
+/* Class = "NSButtonCell"; title = "Radio"; ObjectID = "889"; */
+"889.title" = "Radio";
+
+/* Class = "NSMenuItem"; title = "Daily"; ObjectID = "919"; */
+"919.title" = "Daily";
