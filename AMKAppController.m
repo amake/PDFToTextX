@@ -421,7 +421,7 @@
 	
 	// Update icon and filename display in window
 	[inputFileNameField setStringValue:[[self inputFileURL] lastPathComponent]];
-	[inputFileIconWell setImage:[[NSWorkspace sharedWorkspace] iconForFile:[[self inputFileURL] absoluteString]]];
+	[inputFileIconWell setImage:[[NSWorkspace sharedWorkspace] iconForFile:[[self inputFileURL] path]]];
 	
 	if ([[NSUserDefaults standardUserDefaults] boolForKey:AMKDisplayPDFKey]) {
 		
