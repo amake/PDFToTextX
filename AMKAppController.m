@@ -177,7 +177,7 @@
 	[openPanel setCanChooseFiles:YES];
 	[openPanel setCanChooseDirectories:NO];
 	[openPanel setAllowsMultipleSelection:NO];
-    [openPanel setAllowedFileTypes:[NSArray arrayWithObject:@"pdf"]];
+    [openPanel setAllowedFileTypes:@[@"pdf"]];
 
 	// Proceed if user pressed "OK"
 	if ( [openPanel runModal] == NSOKButton )
@@ -185,7 +185,7 @@
 
 		// Get filename from array returned by panel
 		NSArray *files = [openPanel URLs];
-		NSURL *fileURL = [files objectAtIndex:0];
+		NSURL *fileURL = files[0];
 		
 		[self setInputFileURL:fileURL];
 		
@@ -244,7 +244,7 @@
 	{
 		// Get filename from array returned by panel
 		NSArray *files = [openPanel URLs];
-		NSURL *folderPath = [files objectAtIndex:0];
+		NSURL *folderPath = files[0];
 		
 		[[NSUserDefaults standardUserDefaults] setObject:[folderPath path] forKey:AMKOutputFolderKey];
 	}
@@ -302,8 +302,7 @@
 	NSPasteboard *pb = [NSPasteboard generalPasteboard];
 	
 	// Register supported types with the pasteboard server
-	NSArray *types = [NSArray arrayWithObjects:
-					  NSStringPboardType, NSRTFPboardType, nil];
+	NSArray *types = @[NSStringPboardType, NSRTFPboardType];
 	[pb declareTypes:types owner:self];
 	
 	// Copy plain text to pasteboard

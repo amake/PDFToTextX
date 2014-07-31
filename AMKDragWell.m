@@ -17,9 +17,7 @@
  *	Register to receive dragged files
  */
 - (void)awakeFromNib {
-	[self registerForDraggedTypes:[NSArray arrayWithObjects:
-								   NSFilenamesPboardType,
-								   nil]];
+	[self registerForDraggedTypes:@[NSFilenamesPboardType]];
 }
 
 
@@ -61,7 +59,7 @@
 			return NO;
 		}
 		
-		NSString *file = [files objectAtIndex:0];
+		NSString *file = files[0];
 		
 		BOOL isDir;
 		if ([[NSFileManager defaultManager] fileExistsAtPath:file isDirectory:&isDir] && isDir) {
@@ -90,9 +88,9 @@
     if ([[pboard types] containsObject:NSFilenamesPboardType]) {
         NSArray *files = [pboard propertyListForType:NSFilenamesPboardType];
 		
-		if (AMKDebug) NSLog(@"Received file: %@", [files objectAtIndex:0]);
+		if (AMKDebug) NSLog(@"Received file: %@", files[0]);
 		
-		[[NSUserDefaults standardUserDefaults] setObject:[files objectAtIndex:0] forKey:AMKOutputFolderKey];
+		[[NSUserDefaults standardUserDefaults] setObject:files[0] forKey:AMKOutputFolderKey];
     }
 	
     return YES;

@@ -17,9 +17,7 @@
  *	Register to receive dragged files
  */
 - (void)awakeFromNib {
-	[self registerForDraggedTypes:[NSArray arrayWithObjects:
-								   NSFilenamesPboardType,
-								   nil]];
+	[self registerForDraggedTypes:@[NSFilenamesPboardType]];
 }
 
 
@@ -92,7 +90,7 @@
 		AMKAppController *controller = [NSApp delegate];
 		
 		if ([files count] == 1) {
-			[controller setInputFileURL:[NSURL fileURLWithPath:[files objectAtIndex:0]]];
+			[controller setInputFileURL:[NSURL fileURLWithPath:files[0]]];
 			[controller updateFileDisplay];
 			[controller autoRefresh:self];
 		} else {
