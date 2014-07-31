@@ -11,6 +11,6 @@ LIBS="libz.1.dylib libpaper.1.dylib"
 for LIB in $LIBS; do
     cp /opt/local/lib/$LIB ./
     install_name_tool \
-	-change /opt/local/lib/$LIB \ @executable_path/../Frameworks/$LIB \
+	-change /opt/local/lib/$LIB @executable_path/../Frameworks/$LIB \
 	pdftotext
 done
