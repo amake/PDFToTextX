@@ -143,7 +143,7 @@
 	if (AMKDebug) NSLog(@"Ready to launch task %@ with args: %@", [task launchPath], [task arguments]);
 	[task launch];
     [[standardPipe fileHandleForReading] readInBackgroundAndNotify];
-    [task waitUntilExit];
+    //[task waitUntilExit];
 }
      
 - (void)readData: (NSNotification*)notification {

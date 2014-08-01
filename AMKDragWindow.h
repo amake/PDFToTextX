@@ -7,10 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "AMKPdfAcceptor.h"
 
 
 @interface AMKDragWindow : NSWindow {
-
+    AMKPdfAcceptor *acceptor;
 }
 
 @end

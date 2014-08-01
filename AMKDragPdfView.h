@@ -8,9 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 #import <Quartz/Quartz.h>
+#import "AMKPdfAcceptor.h"
 
 @interface AMKDragPdfView : PDFView {
-
+    AMKPdfAcceptor *acceptor;
 }
 
 @end
