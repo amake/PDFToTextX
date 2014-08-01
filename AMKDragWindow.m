@@ -87,31 +87,36 @@
 		
 		if (AMKDebug) NSLog(@"Received files: %@", files);
 		
-		AMKAppController *controller = [NSApp delegate];
-		
 		if ([files count] == 1) {
-			[controller setInputFileURL:[NSURL fileURLWithPath:files[0]]];
-			[controller updateFileDisplay];
-			[controller autoRefresh:self];
+			NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(addFile:) object:files[0]];
+            [thread start];
 		} else {
-			NSEnumerator *e = [files objectEnumerator];
-			id file;
-			while ((file = [e nextObject])) {
-				// Process only PDFs
-				NSString *extension = [file pathExtension];
-				if ([extension caseInsensitiveCompare:@"pdf"] == NSOrderedSame) {
-					[controller setInputFileURL:[NSURL fileURLWithPath:file]];
-					[controller updateFileDisplay];
-					[controller processFile:self];
-				}
-				// Done processing the PDFs
-			}
-			// Done iterating through dropped files
+			NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(addFiles:) object:files];
+            [thread start];
 		}
 		// Done with seeing how many files were dropped
     }
 	
     return YES;
+}
+
+- (void) addFile: (NSString*)file {
+    AMKAppController *controller = [NSApp delegate];
+    [controller setInputFileURL:[NSURL fileURLWithPath:file]];
+    [controller updateFileDisplay];
+    [controller autoRefresh:self];
+}
+
+- (void) addFiles: (NSArray*)files {
+    AMKAppController *controller = [NSApp delegate];
+    for (NSString *s in files) {
+        NSString *extension = [s pathExtension];
+        if ([extension caseInsensitiveCompare:@"pdf"] == NSOrderedSame) {
+            [controller setInputFileURL:[NSURL fileURLWithPath:s]];
+            [controller updateFileDisplay];
+            [controller processFile:self];
+        }
+    }
 }
 
 @end
