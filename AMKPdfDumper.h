@@ -13,5 +13,6 @@
 }
 
 - (void)dumpPdfToText: (NSURL*)input;
+- (void)cancel;
 
 @end

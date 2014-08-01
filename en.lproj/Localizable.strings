@@ -22,3 +22,8 @@
 /* Processing... */
 "processingStatus" = "Processing...";
 
+/* Go */
+"goButton" = "Go";
+
+/* Cancel */
+"cancelButton" = "Cancel";

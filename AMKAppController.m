@@ -262,15 +262,25 @@
 		if (AMKDebug) NSLog(@"No file to process");
 		return;
 	}
+    
+    if (dumper != nil) {
+        [dumper cancel];
+        [progressIndicator stopAnimation:nil];
+        [goButton setTitle:NSLocalizedString(@"goButton", @"Go")];
+        [outputClipView setNoScroll:false];
+        [statusMessageField setStringValue:@""];
+        dumper = nil;
+        return;
+    }
 	
 	// Initialize and execute the PDF dumping object
 	dumper = [[AMKPdfDumper alloc] init];
 	
 	[progressIndicator startAnimation:nil];
+    [goButton setTitle:NSLocalizedString(@"cancelButton", @"Cancel")];
     [textOutputPreview setString:@""];
     [outputClipView setNoScroll:true];
-	NSString *status = NSLocalizedString(@"processingStatus", @"Processing...");
-	[statusMessageField setStringValue:status];
+	[statusMessageField setStringValue:NSLocalizedString(@"processingStatus", @"Processing...")];
 	[dumper dumpPdfToText:inputFileURL];
 }
 
@@ -284,6 +294,7 @@
 
 - (void)dumpDidFinish {
     [progressIndicator stopAnimation:nil];
+    [goButton setTitle:NSLocalizedString(@"goButton", @"Go")];
     [outputClipView setNoScroll:false];
     
     // User-defined output folder

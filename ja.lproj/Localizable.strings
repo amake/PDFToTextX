@@ -22,3 +22,8 @@
 /* Processing... */
 "processingStatus" = "処理中…";
 
+/* Go */
+"goButton" = "実行";
+
+/* Cancel */
+"cancelButton" = "キャンセル";

@@ -25,6 +25,7 @@
 	IBOutlet NSTextField *statusMessageField;
 	IBOutlet NSTextField *passwordField;
 	IBOutlet NSWindow *mainWindow;
+    IBOutlet NSButton *goButton;
 	
 	NSURL *inputFileURL, *outputFileURL;
     AMKPdfDumper *dumper;

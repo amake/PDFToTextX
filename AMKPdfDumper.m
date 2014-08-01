@@ -173,6 +173,10 @@
     [controller dumpDidFinish];
 }
 
+- (void)cancel {
+    [task terminate];
+}
+
 - (void) dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
