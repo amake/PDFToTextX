@@ -279,6 +279,7 @@
 	[progressIndicator startAnimation:nil];
     [goButton setTitle:NSLocalizedString(@"cancelButton", @"Cancel")];
     [textOutputPreview setString:@""];
+    buffer = [[NSMutableString alloc] init];
     [outputClipView setNoScroll:true];
 	[statusMessageField setStringValue:NSLocalizedString(@"processingStatus", @"Processing...")];
 	[dumper dumpPdfToText:inputFileURL];
@@ -289,6 +290,7 @@
 }
 
 - (void)appendText:(NSString*)text {
+    [buffer appendString:text];
     [textOutputPreview insertText:text];
 }
 
@@ -314,8 +316,9 @@
             outputFileURL = [[inputFileURL URLByDeletingPathExtension]
                              URLByAppendingPathExtension:@"txt"];
         }
-        [[textOutputPreview string] writeToURL:outputFileURL atomically:true encoding:NSUTF8StringEncoding error:nil];
+        [buffer writeToURL:outputFileURL atomically:true encoding:NSUTF8StringEncoding error:nil];
 	}
+    buffer = nil;
     dumper = nil;
 }
 

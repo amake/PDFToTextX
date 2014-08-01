@@ -29,6 +29,7 @@
 	
 	NSURL *inputFileURL, *outputFileURL;
     AMKPdfDumper *dumper;
+    NSMutableString *buffer;
 }
 
 @property(readwrite,copy) NSURL *inputFileURL, *outputFileURL;
