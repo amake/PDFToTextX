@@ -7,15 +7,24 @@
 //
 
 #import "AMKPdfDumper.h"
+#import "AMKAppController.h"
 #import "AMKKeys.h"
 #import <Quartz/Quartz.h>
 
 @implementation AMKPdfDumper
 
-@synthesize errorMessage;
+
+- (id)init {
+    self = [super init];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(readData:)
+                                                 name:NSFileHandleReadCompletionNotification
+                                               object:nil];
+    return self;
+}
 
 
-- (NSString*)dumpPdfToText: (NSURL*)input {
+- (void)dumpPdfToText: (NSURL*)input {
 	
 	if (AMKDebug) NSLog(@"Starting PDF dump");
 	
@@ -62,7 +71,7 @@
 	if ((startPage > 0 && endPage > 0) && endPage >= startPage) {
 		if (AMKDebug) NSLog(@"Valid page range given: %lu to %lu", startPage, endPage);
 		PDFDocument *pdfDoc;
-		pdfDoc = [[PDFDocument alloc] initWithURL:inputFile];
+		pdfDoc = [[PDFDocument alloc] initWithURL:input];
 		if (endPage <= [pdfDoc pageCount]) {
 			if (AMKDebug) NSLog(@"PDF contains %lu pages", [pdfDoc pageCount]);
 			[args addObject:@"-f"];
@@ -108,48 +117,64 @@
     // Output to stdout
     [args addObject:@"-"];
 	
-	NSTask *theTask = [[NSTask alloc] init];
+	task = [[NSTask alloc] init];
 	
 	// At some point pdftotext started reporting an error if the
 	// PAPERSIZE environment variable was not set. Default to A4.
-	[theTask setEnvironment:@{@"PAPERSIZE": @"A4"}];
+	[task setEnvironment:@{@"PAPERSIZE": @"A4"}];
 	
 	if (AMKDebug) NSLog(@"Setting current path to: %@", [[NSBundle mainBundle] resourcePath]);
-	[theTask setCurrentDirectoryPath:[[NSBundle mainBundle] resourcePath]];
+	[task setCurrentDirectoryPath:[[NSBundle mainBundle] resourcePath]];
 	
 	if (AMKDebug) NSLog(@"Setting launch path: %@", pdftotext);
-	[theTask setLaunchPath:pdftotext];
+	[task setLaunchPath:pdftotext];
 	
 	if (AMKDebug) NSLog(@"Setting arguments");
-	[theTask setArguments:args];
+	[task setArguments:args];
 	
 //	NSFileHandle *output = [NSFileHandle fileHandleForWritingAtPath:@"/tmp/error.txt"];
 
 	NSPipe *errorPipe = [NSPipe pipe];
-	[theTask setStandardError:errorPipe];
+	[task setStandardError:errorPipe];
 	
 	NSPipe *standardPipe = [NSPipe pipe];
-	[theTask setStandardOutput:standardPipe];
+	[task setStandardOutput:standardPipe];
 
-	if (AMKDebug) NSLog(@"Ready to launch task %@ with args: %@", [theTask launchPath], [theTask arguments]);
-	[theTask launch];
-    NSData *outputData = [[standardPipe fileHandleForReading] readDataToEndOfFile];
-	[theTask waitUntilExit];
-		
-	if (AMKDebug && ![theTask isRunning]) NSLog(@"Task ended with code: %d", [theTask terminationStatus]);
-	
-	// Read standard error and save it
-	NSData *errorData = [[errorPipe fileHandleForReading] availableData];
-	if ((errorData != nil) && [errorData length]) {
-		if (AMKDebug) NSLog(@"Task reported an error.");
-		[self setErrorMessage:[[NSString alloc] initWithData:errorData encoding:NSUTF8StringEncoding]];
-	} else {
-		if (AMKDebug) NSLog(@"Task reported no errors.");
-		NSString *message = NSLocalizedString(@"doneStatus", @"Done");
-		[self setErrorMessage:message];
-	}
-	
-	return [[NSString alloc] initWithData:outputData encoding:NSUTF8StringEncoding];
+	if (AMKDebug) NSLog(@"Ready to launch task %@ with args: %@", [task launchPath], [task arguments]);
+	[task launch];
+    [[standardPipe fileHandleForReading] readInBackgroundAndNotify];
+    [task waitUntilExit];
+}
+     
+- (void)readData: (NSNotification*)notification {
+    AMKAppController *controller = [NSApp delegate];
+    
+    NSData *data = [[notification userInfo] objectForKey:NSFileHandleNotificationDataItem];
+    if ([data length]) {
+        [controller appendText:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
+    }
+    if ([task isRunning] || [data length]) {
+        [[notification object] readInBackgroundAndNotify];
+        return;
+    }
+    
+    if (AMKDebug && ![task isRunning]) NSLog(@"Task ended with code: %d", [task terminationStatus]);
+    
+    // Read standard error and save it
+    NSData *errorData = [[[task standardError] fileHandleForReading] availableData];
+    if ((errorData != nil) && [errorData length]) {
+        if (AMKDebug) NSLog(@"Task reported an error.");
+        [controller setErrorText:[[NSString alloc] initWithData:errorData encoding:NSUTF8StringEncoding]];
+    } else {
+        if (AMKDebug) NSLog(@"Task reported no errors.");
+        NSString *message = NSLocalizedString(@"doneStatus", @"Done");
+        [controller setErrorText:message];
+    }
+    [controller dumpDidFinish];
+}
+
+- (void) dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

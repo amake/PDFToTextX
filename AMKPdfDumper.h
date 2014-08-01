@@ -8,14 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-
 @interface AMKPdfDumper : NSObject {
-	NSURL *inputFile, *outputFile;
-    NSString *errorMessage;
+    NSTask *task;
 }
 
-@property(readwrite,copy) NSString *errorMessage;
-
-- (NSString*)dumpPdfToText: (NSURL*)input;
+- (void)dumpPdfToText: (NSURL*)input;
 
 @end

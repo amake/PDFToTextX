@@ -264,16 +264,26 @@
 	}
 	
 	// Initialize and execute the PDF dumping object
-	AMKPdfDumper *dumper = [[AMKPdfDumper alloc] init];
+	dumper = [[AMKPdfDumper alloc] init];
 	
 	[progressIndicator startAnimation:nil];
+    [textOutputPreview setString:@""];
 	NSString *status = NSLocalizedString(@"processingStatus", @"Processing...");
 	[statusMessageField setStringValue:status];
-	NSString *outputText = [dumper dumpPdfToText:inputFileURL];
-	
-    // Indicate output file
-	if (AMKDebug) NSLog(@"Setting output file");
-	
+	[dumper dumpPdfToText:inputFileURL];
+}
+
+- (void)setErrorText:(NSString *)error {
+    [statusMessageField setStringValue:error];
+}
+
+- (void)appendText:(NSString*)text {
+    [textOutputPreview insertText:text];
+}
+
+- (void)dumpDidFinish {
+    [progressIndicator stopAnimation:nil];
+    
     // User-defined output folder
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	if ([defaults boolForKey:AMKAutoSaveKey]) {
@@ -291,15 +301,9 @@
             outputFileURL = [[inputFileURL URLByDeletingPathExtension]
                              URLByAppendingPathExtension:@"txt"];
         }
-        [outputText writeToURL:outputFileURL atomically:true encoding:NSUTF8StringEncoding error:nil];
+        [[textOutputPreview string] writeToURL:outputFileURL atomically:true encoding:NSUTF8StringEncoding error:nil];
 	}
-	
-    [textOutputPreview setString:outputText ? outputText : @""];
-    
-    [progressIndicator stopAnimation:nil];
-	
-	[statusMessageField setStringValue:[dumper errorMessage]];
-	
+    dumper = nil;
 }
 
 

@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <Quartz/Quartz.h>
+#import "AMKPdfDumper.h"
 
 @interface AMKAppController : NSObject {
 	IBOutlet NSTextField *inputFileNameField;
@@ -24,6 +25,7 @@
 	IBOutlet NSWindow *mainWindow;
 	
 	NSURL *inputFileURL, *outputFileURL;
+    AMKPdfDumper *dumper;
 }
 
 @property(readwrite,copy) NSURL *inputFileURL, *outputFileURL;
@@ -44,6 +46,9 @@
 - (IBAction)showXpdfManPage:(id)sender;
 
 - (void)updateFileDisplay;
+- (void)appendText:(NSString*)text;
+- (void)setErrorText:(NSString*)error;
+- (void)dumpDidFinish;
 + (void)begForDonation;
 
 @end
