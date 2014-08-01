@@ -613,7 +613,7 @@ Maintain (as best as possible) the original physical layout of the text. The def
 Sets the end-of-line convention to use for text output.  (Default: unix)</string>
                                     <popUpButtonCell key="cell" type="push" title="mac" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="602" id="600">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
+                                        <font key="font" metaFont="menu"/>
                                         <menu key="menu" title="OtherViews" id="601">
                                             <items>
                                                 <menuItem title="unix" id="604"/>
@@ -752,8 +752,8 @@ Keep the text in content stream order.  This is a hack which often "undoes" colu
                                         </connections>
                                     </secureTextFieldCell>
                                     <connections>
-                                        <binding destination="487" name="enabled" keyPath="values.UsePassword" id="833"/>
                                         <binding destination="487" name="value" keyPath="values.PDFPassword" id="831"/>
+                                        <binding destination="487" name="enabled" keyPath="values.UsePassword" id="833"/>
                                     </connections>
                                 </secureTextField>
                                 <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" id="817">
@@ -775,8 +775,8 @@ Keep the text in content stream order.  This is a hack which often "undoes" colu
 
 Specify the owner password for the PDF file.  Providing this will bypass all security restrictions.</string>
                                                 <connections>
-                                                    <binding destination="487" name="enabled" keyPath="values.UsePassword" id="854"/>
                                                     <binding destination="487" name="value" keyPath="values.OwnerPasswordType" id="847"/>
+                                                    <binding destination="487" name="enabled" keyPath="values.UsePassword" id="854"/>
                                                 </connections>
                                             </buttonCell>
                                             <buttonCell type="radio" title="User" imagePosition="left" alignment="left" inset="2" id="819">
@@ -786,12 +786,12 @@ Specify the owner password for the PDF file.  Providing this will bypass all sec
 
 Specify the user password for the PDF file.</string>
                                                 <connections>
-                                                    <binding destination="487" name="enabled" keyPath="values.UsePassword" id="855"/>
                                                     <binding destination="487" name="value" keyPath="values.OwnerPasswordType" id="858">
                                                         <dictionary key="options">
                                                             <string key="NSValueTransformerName">NSNegateBoolean</string>
                                                         </dictionary>
                                                     </binding>
+                                                    <binding destination="487" name="enabled" keyPath="values.UsePassword" id="855"/>
                                                 </connections>
                                             </buttonCell>
                                         </column>
@@ -845,7 +845,7 @@ Specify the user password for the PDF file.</string>
                                     <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="463">
                                         <rect key="frame" x="0.0" y="0.0" width="303" height="265"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <clipView key="contentView" id="9KT-In-856">
+                                        <clipView key="contentView" id="9KT-In-856" customClass="AMKClipView">
                                             <rect key="frame" x="1" y="1" width="286" height="263"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
@@ -914,6 +914,7 @@ Specify the user password for the PDF file.</string>
                         </buttonCell>
                         <connections>
                             <action selector="selectDestinationFolder:" target="470" id="691"/>
+                            <binding destination="487" name="enabled" keyPath="values.AutoSave" id="695"/>
                             <binding destination="487" name="enabled2" keyPath="values.OutputToPDFFolder" previousBinding="695" id="914">
                                 <dictionary key="options">
                                     <integer key="NSMultipleValuesPlaceholder" value="-1"/>
@@ -923,7 +924,6 @@ Specify the user password for the PDF file.</string>
                                     <string key="NSValueTransformerName">NSNegateBoolean</string>
                                 </dictionary>
                             </binding>
-                            <binding destination="487" name="enabled" keyPath="values.AutoSave" id="695"/>
                         </connections>
                     </button>
                     <button toolTip="When enabled, the extracted text will be automatically saved in the folder specified below." id="678">
@@ -950,6 +950,7 @@ Specify the user password for the PDF file.</string>
                             </connections>
                         </imageCell>
                         <connections>
+                            <binding destination="487" name="enabled" keyPath="values.AutoSave" id="697"/>
                             <binding destination="487" name="enabled2" keyPath="values.OutputToPDFFolder" previousBinding="697" id="916">
                                 <dictionary key="options">
                                     <integer key="NSMultipleValuesPlaceholder" value="-1"/>
@@ -959,7 +960,6 @@ Specify the user password for the PDF file.</string>
                                     <string key="NSValueTransformerName">NSNegateBoolean</string>
                                 </dictionary>
                             </binding>
-                            <binding destination="487" name="enabled" keyPath="values.AutoSave" id="697"/>
                         </connections>
                     </imageView>
                     <textField verticalHuggingPriority="750" id="682">
@@ -1060,6 +1060,7 @@ Specify the user password for the PDF file.</string>
                 <outlet property="inputFileIconWell" destination="467" id="686"/>
                 <outlet property="inputFileNameField" destination="458" id="690"/>
                 <outlet property="mainWindow" destination="371" id="917"/>
+                <outlet property="outputClipView" destination="9KT-In-856" id="Bqi-Xg-olE"/>
                 <outlet property="outputFolderIconWell" destination="680" id="687"/>
                 <outlet property="passwordField" destination="815" id="865"/>
                 <outlet property="pdfViewPane" destination="462" id="481"/>
@@ -1335,8 +1336,8 @@ Specify the user password for the PDF file.</string>
                             </allowedInputSourceLocales>
                         </textFieldCell>
                         <connections>
-                            <binding destination="487" name="enabled" keyPath="values.UseCustomBinary" id="768"/>
                             <binding destination="487" name="value" keyPath="values.CustomBinaryPath" id="765"/>
+                            <binding destination="487" name="enabled" keyPath="values.UseCustomBinary" id="768"/>
                             <outlet property="delegate" destination="470" id="752"/>
                         </connections>
                     </textField>
@@ -1387,7 +1388,7 @@ Specify the user password for the PDF file.</string>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <popUpButtonCell key="cell" type="push" title="Hourly" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="3600" imageScaling="proportionallyDown" inset="2" selectedItem="877" id="874">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="menu"/>
                             <menu key="menu" title="OtherViews" id="875">
                                 <items>
                                     <menuItem title="Hourly" state="on" tag="3600" id="877"/>

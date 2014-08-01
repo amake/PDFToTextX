@@ -9,10 +9,12 @@
 #import <Cocoa/Cocoa.h>
 #import <Quartz/Quartz.h>
 #import "AMKPdfDumper.h"
+#import "AMKClipView.h"
 
 @interface AMKAppController : NSObject {
 	IBOutlet NSTextField *inputFileNameField;
 	IBOutlet NSTextView *textOutputPreview;
+    IBOutlet AMKClipView *outputClipView;
 	IBOutlet PDFView *pdfViewPane;
 	IBOutlet NSImageView *inputFileIconWell;
 	IBOutlet NSImageView *outputFolderIconWell;

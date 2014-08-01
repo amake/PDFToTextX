@@ -268,6 +268,7 @@
 	
 	[progressIndicator startAnimation:nil];
     [textOutputPreview setString:@""];
+    [outputClipView setNoScroll:true];
 	NSString *status = NSLocalizedString(@"processingStatus", @"Processing...");
 	[statusMessageField setStringValue:status];
 	[dumper dumpPdfToText:inputFileURL];
@@ -283,6 +284,7 @@
 
 - (void)dumpDidFinish {
     [progressIndicator stopAnimation:nil];
+    [outputClipView setNoScroll:false];
     
     // User-defined output folder
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

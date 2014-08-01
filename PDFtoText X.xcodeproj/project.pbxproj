@@ -38,6 +38,7 @@
 		C448D550138DEEA000632126 /* AMKDragPdfView.m in Sources */ = {isa = PBXBuildFile; fileRef = C448D54F138DEEA000632126 /* AMKDragPdfView.m */; };
 		C448D571138DF9AC00632126 /* PDFtoText X Help in Resources */ = {isa = PBXBuildFile; fileRef = C448D570138DF9AC00632126 /* PDFtoText X Help */; };
 		C448D58F138DFA2D00632126 /* defaultPdf.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C448D58E138DFA2D00632126 /* defaultPdf.pdf */; };
+		C4BDD074198B7CDF003A5DE4 /* AMKClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BDD073198B7CDF003A5DE4 /* AMKClipView.m */; };
 		C4E71A460F995BA40006D697 /* LICENSE.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C4E71A450F995BA40006D697 /* LICENSE.rtf */; };
 		C4E71AA40F9966740006D697 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = C4E71AA30F9966740006D697 /* dsa_pub.pem */; };
 		C4E71DD40FA741D40006D697 /* xpdf in Resources */ = {isa = PBXBuildFile; fileRef = C4E71DD30FA741D40006D697 /* xpdf */; };
@@ -108,6 +109,8 @@
 		C4BDD06B198A22D8003A5DE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C4BDD06C198A2344003A5DE4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		C4BDD06E198A2347003A5DE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		C4BDD072198B7CDF003A5DE4 /* AMKClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMKClipView.h; sourceTree = "<group>"; };
+		C4BDD073198B7CDF003A5DE4 /* AMKClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMKClipView.m; sourceTree = "<group>"; };
 		C4E71A450F995BA40006D697 /* LICENSE.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = LICENSE.rtf; sourceTree = "<group>"; };
 		C4E71AA30F9966740006D697 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		C4E71B250F99A8D10006D697 /* English */ = {isa = PBXFileReference; lastKnownFileType = folder; name = English; path = "en.lproj/PDFtoText X Help"; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 				C4F4802D0F9053B600762447 /* AMKPdfDumper.m */,
 				C4F4801F0F9052CC00762447 /* AMKAppController.h */,
 				C4F480200F9052CC00762447 /* AMKAppController.m */,
+				C4BDD072198B7CDF003A5DE4 /* AMKClipView.h */,
+				C4BDD073198B7CDF003A5DE4 /* AMKClipView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -347,6 +352,7 @@
 				C417FEC10F93726B0031A2E9 /* AMKDragWindow.m in Sources */,
 				8DCFAE3B0F945E110091F961 /* AMKDragWell.m in Sources */,
 				C417FF9B0F94BF130031A2E9 /* AMKPathToIconTransformer.m in Sources */,
+				C4BDD074198B7CDF003A5DE4 /* AMKClipView.m in Sources */,
 				C448D550138DEEA000632126 /* AMKDragPdfView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
