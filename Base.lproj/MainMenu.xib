@@ -602,6 +602,11 @@ Maintain (as best as possible) the original physical layout of the text. The def
                                     </buttonCell>
                                     <connections>
                                         <action selector="autoRefresh:" target="470" id="662"/>
+                                        <binding destination="487" name="enabled" keyPath="values.RawOutput" id="1a0-Jm-yhR">
+                                            <dictionary key="options">
+                                                <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                            </dictionary>
+                                        </binding>
                                         <binding destination="487" name="value" keyPath="values.MimicLayout" id="610"/>
                                     </connections>
                                 </button>
