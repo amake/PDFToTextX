@@ -291,7 +291,10 @@
 
 - (void)appendText:(NSString*)text {
     [buffer appendString:text];
-    [textOutputPreview insertText:text];
+    NSRange range;
+    range.length = 0;
+    range.location = [[textOutputPreview string] length];
+    [textOutputPreview replaceCharactersInRange:range withString:text];
 }
 
 - (void)dumpDidFinish {
