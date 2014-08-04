@@ -96,4 +96,8 @@
     return YES;
 }
 
+- (void)concludeDragOperation:(id <NSDraggingInfo>)sender {
+    // Nothing
+}
+
 @end

@@ -92,6 +92,10 @@
     return YES;
 }
 
+- (void)concludeDragOperation:(id <NSDraggingInfo>)sender {
+    // Nothing
+}
+
 - (void) addFile: (NSString*)file {
     AMKAppController *controller = [NSApp delegate];
     [controller setInputFileURL:[NSURL fileURLWithPath:file]];
