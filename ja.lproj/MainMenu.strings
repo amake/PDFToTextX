@@ -525,10 +525,10 @@
 "888.title" = "Radio";
 
 /* Class = "NSButtonCell"; title = "その他:"; ObjectID = "889"; */
-"889.title" = "その他:";
+"888.title" = "その他:";
 
 /* Class = "NSButtonCell"; title = "元 PDF と同じフォルダ"; ObjectID = "890"; */
-"890.title" = "元 PDF と同じフォルダ";
+"887.title" = "元 PDF と同じフォルダ";
 
 /* Class = "NSMenuItem"; title = "毎日"; ObjectID = "903"; */
 "903.title" = "毎日";
