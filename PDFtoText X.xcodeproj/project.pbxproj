@@ -23,7 +23,6 @@
 
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
-		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		8D5C4EAC0FA6F03400B9456E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8D5C4EAB0FA6F03400B9456E /* Credits.rtf */; };
@@ -34,7 +33,7 @@
 		C417FEC10F93726B0031A2E9 /* AMKDragWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C417FEC00F93726B0031A2E9 /* AMKDragWindow.m */; };
 		C417FF9B0F94BF130031A2E9 /* AMKPathToIconTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = C417FF9A0F94BF130031A2E9 /* AMKPathToIconTransformer.m */; };
 		C448D1DE13861E5900632126 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C448D1DD13861E5900632126 /* Sparkle.framework */; };
-		C448D1F713861EB200632126 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C448D1DD13861E5900632126 /* Sparkle.framework */; };
+		C448D1F713861EB200632126 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C448D1DD13861E5900632126 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		C448D550138DEEA000632126 /* AMKDragPdfView.m in Sources */ = {isa = PBXBuildFile; fileRef = C448D54F138DEEA000632126 /* AMKDragPdfView.m */; };
 		C448D571138DF9AC00632126 /* PDFtoText X Help in Resources */ = {isa = PBXBuildFile; fileRef = C448D570138DF9AC00632126 /* PDFtoText X Help */; };
 		C448D58F138DFA2D00632126 /* defaultPdf.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C448D58E138DFA2D00632126 /* defaultPdf.pdf */; };
@@ -50,8 +49,8 @@
 		C4F4817F0F90626000762447 /* languages in Resources */ = {isa = PBXBuildFile; fileRef = C4F480950F90626000762447 /* languages */; };
 		C4F481D60F90634100762447 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F481D50F90634100762447 /* Quartz.framework */; };
 		C4F484570F90F4BC00762447 /* AMKKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F484560F90F4BC00762447 /* AMKKeys.m */; };
-		C4F9595814053A50002A9354 /* libpaper.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = C4F9595414053A0D002A9354 /* libpaper.1.dylib */; };
-		C4F9595914053A50002A9354 /* libz.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = C4F9595514053A0D002A9354 /* libz.1.dylib */; };
+		C4F9595814053A50002A9354 /* libpaper.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = C4F9595414053A0D002A9354 /* libpaper.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		C4F9595914053A50002A9354 /* libz.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = C4F9595514053A0D002A9354 /* libz.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +79,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,11 +89,9 @@
 		8D1107320486CEB800E47090 /* PDFtoText X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PDFtoText X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5C4EAD0FA6F04200B9456E /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Japanese; path = ja.lproj/Credits.rtf; sourceTree = "<group>"; };
 		8D5C4ED50FA6FB7300B9456E /* Japanese */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Japanese; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		8D93FF660FA81C520041C76E /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8D93FFB30FA837A50041C76E /* PDFtoText X.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "PDFtoText X.icns"; sourceTree = "<group>"; };
 		8DCFAE390F945E110091F961 /* AMKDragWell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMKDragWell.h; sourceTree = "<group>"; };
 		8DCFAE3A0F945E110091F961 /* AMKDragWell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMKDragWell.m; sourceTree = "<group>"; };
-		8DDD5F2F0F98732C0063D417 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		C417FDC80F91E6BF0031A2E9 /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
 		C417FEBF0F93726B0031A2E9 /* AMKDragWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMKDragWindow.h; sourceTree = "<group>"; };
 		C417FEC00F93726B0031A2E9 /* AMKDragWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMKDragWindow.m; sourceTree = "<group>"; };
@@ -104,19 +100,21 @@
 		C448D1DD13861E5900632126 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		C448D54E138DEEA000632126 /* AMKDragPdfView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMKDragPdfView.h; sourceTree = "<group>"; };
 		C448D54F138DEEA000632126 /* AMKDragPdfView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMKDragPdfView.m; sourceTree = "<group>"; };
-		C448D58C138DFA2700632126 /* English */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = English; path = en.lproj/defaultPdf.pdf; sourceTree = "<group>"; };
 		C448D590138DFAE800632126 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Japanese; path = ja.lproj/defaultPdf.pdf; sourceTree = "<group>"; };
 		C448D806138E041900632126 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Japanese; path = "ja.lproj/PDFtoText X Help"; sourceTree = "<group>"; };
+		C4800F8D19CC01EE006D919F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		C4800F8E19CC01EE006D919F /* en */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = en; path = en.lproj/defaultPdf.pdf; sourceTree = "<group>"; };
+		C4800F8F19CC01EE006D919F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C4800F9019CC01EE006D919F /* en */ = {isa = PBXFileReference; lastKnownFileType = folder; name = en; path = "en.lproj/PDFtoText X Help"; sourceTree = "<group>"; };
+		C4800F9119CC01EE006D919F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		C4BDD06B198A22D8003A5DE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C4BDD06C198A2344003A5DE4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainMenu.strings; sourceTree = "<group>"; };
-		C4BDD06E198A2347003A5DE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		C4BDD072198B7CDF003A5DE4 /* AMKClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMKClipView.h; sourceTree = "<group>"; };
 		C4BDD073198B7CDF003A5DE4 /* AMKClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMKClipView.m; sourceTree = "<group>"; };
 		C4BDD075198B880D003A5DE4 /* AMKPdfAcceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMKPdfAcceptor.h; sourceTree = "<group>"; };
 		C4BDD076198B880D003A5DE4 /* AMKPdfAcceptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMKPdfAcceptor.m; sourceTree = "<group>"; };
 		C4E71A450F995BA40006D697 /* LICENSE.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = LICENSE.rtf; sourceTree = "<group>"; };
 		C4E71AA30F9966740006D697 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
-		C4E71B250F99A8D10006D697 /* English */ = {isa = PBXFileReference; lastKnownFileType = folder; name = English; path = "en.lproj/PDFtoText X Help"; sourceTree = "<group>"; };
 		C4E71DD30FA741D40006D697 /* xpdf */ = {isa = PBXFileReference; lastKnownFileType = folder; path = xpdf; sourceTree = "<group>"; };
 		C4F47D8D0F90383A00762447 /* pdftotext */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pdftotext; sourceTree = "<group>"; };
 		C4F47F330F90385F00762447 /* xpdfrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = xpdfrc; sourceTree = "<group>"; };
@@ -236,7 +234,6 @@
 				C448D570138DF9AC00632126 /* PDFtoText X Help */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				8D5C4EAB0FA6F03400B9456E /* Credits.rtf */,
-				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				C4F9595414053A0D002A9354 /* libpaper.1.dylib */,
 				C4F9595514053A0D002A9354 /* libz.1.dylib */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
@@ -281,7 +278,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0600;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PDFtoText X" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -310,7 +307,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				C4F47D8E0F90383A00762447 /* pdftotext in Resources */,
 				C4F47F340F90385F00762447 /* xpdfrc in Resources */,
@@ -374,20 +370,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				089C165DFE840E0CC02AAC07 /* English */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C4BDD06B198A22D8003A5DE4 /* Base */,
 				C4BDD06C198A2344003A5DE4 /* ja */,
-				C4BDD06E198A2347003A5DE4 /* en */,
+				C4800F8D19CC01EE006D919F /* en */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -395,8 +383,8 @@
 		8D5C4EAB0FA6F03400B9456E /* Credits.rtf */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8DDD5F2F0F98732C0063D417 /* English */,
 				8D5C4EAD0FA6F04200B9456E /* Japanese */,
+				C4800F9119CC01EE006D919F /* en */,
 			);
 			name = Credits.rtf;
 			sourceTree = "<group>";
@@ -405,7 +393,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8D5C4ED50FA6FB7300B9456E /* Japanese */,
-				8D93FF660FA81C520041C76E /* English */,
+				C4800F8F19CC01EE006D919F /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -413,8 +401,8 @@
 		C448D570138DF9AC00632126 /* PDFtoText X Help */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C4E71B250F99A8D10006D697 /* English */,
 				C448D806138E041900632126 /* Japanese */,
+				C4800F9019CC01EE006D919F /* en */,
 			);
 			name = "PDFtoText X Help";
 			sourceTree = "<group>";
@@ -422,8 +410,8 @@
 		C448D58E138DFA2D00632126 /* defaultPdf.pdf */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C448D58C138DFA2700632126 /* English */,
 				C448D590138DFAE800632126 /* Japanese */,
+				C4800F8E19CC01EE006D919F /* en */,
 			);
 			name = defaultPdf.pdf;
 			sourceTree = "<group>";

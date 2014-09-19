@@ -311,78 +311,6 @@
 /* Class = "NSPopUpButton"; ibShadowedToolTip = "-eol\n\nSets the end-of-line convention to use for text output.  (Default: unix)"; ObjectID = "562"; */
 "562.ibShadowedToolTip" = "-eol\n\nSets the end-of-line convention to use for text output.  (Default: unix)";
 
-/* Class = "NSPopUpButton"; ibShadowedToolTip = "-enc\n\nSets the encoding to use for text output.  (Default: UTF-8)"; ObjectID = "564"; */
-"564.ibShadowedToolTip" = "-enc\n\nSets the encoding to use for text output.  (Default: UTF-8)";
-
-/* Class = "NSTextFieldCell"; title = "Encoding:"; ObjectID = "566"; */
-"566.title" = "Encoding:";
-
-/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "568"; */
-"568.title" = "OtherViews";
-
-/* Class = "NSMenuItem"; title = "ISO-8859-9"; ObjectID = "573"; */
-"573.title" = "ISO-8859-9";
-
-/* Class = "NSMenuItem"; title = "TIS-620"; ObjectID = "578"; */
-"578.title" = "TIS-620";
-
-/* Class = "NSMenuItem"; title = "Windows-1255"; ObjectID = "579"; */
-"579.title" = "Windows-1255";
-
-/* Class = "NSMenuItem"; title = "ISO-8859-8"; ObjectID = "580"; */
-"580.title" = "ISO-8859-8";
-
-/* Class = "NSMenuItem"; title = "ISO-8859-6"; ObjectID = "581"; */
-"581.title" = "ISO-8859-6";
-
-/* Class = "NSMenuItem"; title = "ISO-2022-KR"; ObjectID = "582"; */
-"582.title" = "ISO-2022-KR";
-
-/* Class = "NSMenuItem"; title = "GBK"; ObjectID = "583"; */
-"583.title" = "GBK";
-
-/* Class = "NSMenuItem"; title = "EUC-CN"; ObjectID = "584"; */
-"584.title" = "EUC-CN";
-
-/* Class = "NSMenuItem"; title = "ISO-2022-CN"; ObjectID = "585"; */
-"585.title" = "ISO-2022-CN";
-
-/* Class = "NSMenuItem"; title = "Big5ascii"; ObjectID = "586"; */
-"586.title" = "Big5ascii";
-
-/* Class = "NSMenuItem"; title = "Big5"; ObjectID = "587"; */
-"587.title" = "Big5";
-
-/* Class = "NSMenuItem"; title = "Latin2"; ObjectID = "588"; */
-"588.title" = "Latin2";
-
-/* Class = "NSMenuItem"; title = "KOI8-R"; ObjectID = "589"; */
-"589.title" = "KOI8-R";
-
-/* Class = "NSMenuItem"; title = "ISO-8859-7"; ObjectID = "591"; */
-"591.title" = "ISO-8859-7";
-
-/* Class = "NSMenuItem"; title = "Greek"; ObjectID = "592"; */
-"592.title" = "Greek";
-
-/* Class = "NSMenuItem"; title = "Japanese"; ObjectID = "593"; */
-"593.title" = "Japanese";
-
-/* Class = "NSMenuItem"; title = "Shift-JIS"; ObjectID = "594"; */
-"594.title" = "Shift-JIS";
-
-/* Class = "NSMenuItem"; title = "EUC-JP"; ObjectID = "595"; */
-"595.title" = "EUC-JP";
-
-/* Class = "NSMenuItem"; title = "ISO-2022-JP"; ObjectID = "596"; */
-"596.title" = "ISO-2022-JP";
-
-/* Class = "NSMenuItem"; title = "Latin1"; ObjectID = "597"; */
-"597.title" = "Latin1";
-
-/* Class = "NSMenuItem"; title = "UTF-8"; ObjectID = "598"; */
-"598.title" = "UTF-8";
-
 /* Class = "NSTextFieldCell"; title = "Line endings:"; ObjectID = "599"; */
 "599.title" = "Line endings:";
 
@@ -532,3 +460,6 @@
 
 /* Class = "NSMenuItem"; title = "Daily"; ObjectID = "919"; */
 "919.title" = "Daily";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "wsp-8n-Fj9"; */
+"wsp-8n-Fj9.title" = "Box";
